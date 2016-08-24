@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../lib/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./css/main.css" />
+		<title></title>    
+	</head>
+	<body>
+		<div class="topBanner">
+			<i class="remove"></i>
+			<div class="buttons">
+				<em></em>
+				<em></em>
+			</div>
+			<div class="top top1">
+				<div class="topIn"><a><img src="./img/top1.jpg" /></a></div>
+			</div>
+			<div class="top top2">
+				<div class="topIn"><a><img src="./img/top2.jpg" /></a></div>
+			</div>
+		</div>
+		<div class="global">
+			<div class="outBar">
+				<div class="cenBar">
+					<ul class="leftUl">
+						<li class="prevCity"><a>杭州<div class="lines"></div></a></li>
+						<li class="allCity">
+							<a>切换城市<i class="arrow"></i></a>
+							<div class="hotCity">
+								<h3>热门城市</h3>
+								<div class="AllHotCity">
+
+								</div>
+								<a class="moreCity">更多城市 ></a>
+							</div>
+						</li>
+					</ul>
+					<ul class="rightUl">
+						<li class=""><a>登录<div class="lines"></div></a></li>
+						<li class="mob-nuomi">
+							<a>手机糯米<i class="arrow"></i><div class="lines"></div></a>
+							<div class="mob-Inner">
+								<a class="code"></a>
+							</div>
+						</li>
+						<li><a>我的订单<div class="lines"></div></a></li>
+						<li class="my-nuomi">
+							<a>我的糯米<i class="arrow"></i><div class="lines"></div></a>
+							<div class="my-Inner">
+								<a>我的订单</a>
+								<a>选座订单</a>
+								<a>我的收藏</a>
+								<a>我的评论</a>
+								<a>我的余额</a>
+								<a>我的优惠券</a>
+								<a>账户设置</a>
+								<a>我的百度</a>
+							</div>
+						</li>
+						<li class="late-view">
+							<a>最近浏览<i class="arrow"></i><div class="lines"></div></a>
+							<div class="late-Inner">
+								<span>暂无浏览记录</span>
+							</div>
+						</li>
+						<li class="me-tenant">
+							<a>我是商家<i class="arrow"></i><div class="lines"></div></a>
+							<div class="tenant-Inner">
+								<a>商家合作</a>
+								<a>我想合作</a>
+							</div>
+						</li>
+						<li class=""><a>帮助中心<div class="lines"></div></a></li>
+						<li class="follow">
+							<a>关注<i class="arrow"></i><div class="lines"></div></a>
+							<div class="follow-Inner">
+								<a class="code2"></a>
+								<p>百度糯米:<span>nuomivip</span></p>
+							</div>
+						</li>
+						<li class=""><a class="collect">收藏</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="search">
+				<div class="titIcon"></div>
+				<div class="rightUtils">
+					<a class="top"><div class="util util1"><span>未消费，随便退！</span><i class="Icon"></i></div></a>
+					<a class="mid"><div class="util util2"><span>消费不满意先行赔付！</span><i class="Icon"></i></div></a>
+					<a class="bot"><div class="util util3"><span>过期自动退！</span><i class="Icon"></i></div></a>
+				</div>
+				<form class="searchInput">
+					<input type="text" name="search" placeholder="搜索商家或地点" />
+					<div class="submit"></div>
+					<ul class="choose">
+						<li><a>外婆家</a></li>
+						<li><a>必胜客</a></li>
+						<li><a>聚优惠餐饮</a></li>
+					</ul>
+				</form>
+			</div>
+			<div class="allStore">
+				<div class="leftCh">
+					<div class="allClass">
+						<span>全部分类</span>
+					</div>
+					<ul class="bigStoreUl">
+						
+					</ul>
+				</div>
+				<div class="rightCh">
+					<ul class="sele">
+						
+					</ul>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="brand" style="background:skyblue;width :1000px;height:500px;"></div>
+		</div>
+		<script type="text/javascript" src="../lib/jquery@1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/data.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script>
+			addhotcity(allCity);
+			creatAllStore(allClass);
+		</script>
+	</body>
+</html>

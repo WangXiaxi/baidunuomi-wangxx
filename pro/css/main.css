@@ -1,0 +1,559 @@
+.topBanner {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+.topBanner i.remove {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  z-index: 2;
+  right: 0;
+  background: url("../img/icon.png") right -2211px no-repeat;
+}
+.topBanner .top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.topBanner .top img {
+  float: left;
+}
+.topBanner .top .topIn {
+  width: 980px;
+  height: 80px;
+  margin: 0 auto;
+}
+.topBanner .top1 {
+  background: #fbcac5;
+}
+.topBanner .top2 {
+  background: #000;
+  display: none;
+}
+.topBanner .buttons {
+  width: 29px;
+  height: 11px;
+  border-radius: 4px;
+  background: #322928;
+  position: absolute;
+  z-index: 2;
+  bottom: 6px;
+  right: 7px;
+  padding-top: 4px;
+}
+.topBanner .buttons em {
+  margin-left: 5px;
+  float: left;
+  display: block;
+  height: 7px;
+  width: 7px;
+  border-radius: 4px;
+  background: #d6cccb;
+}
+.topBanner .buttons em.cur {
+  background: #cc395e;
+}
+.global {
+  width: 100%;
+}
+.global .outBar {
+  width: 100%;
+  height: 36px;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  position: relative;
+  z-index: 10;
+  line-height: 36px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.global .outBar .cenBar {
+  width: 1210px;
+  height: 36px;
+  position: relative;
+  margin: 0 auto;
+}
+.global .outBar .cenBar i.arrow {
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  background: url("../img/arrow.png") no-repeat;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+.global .outBar .cenBar div.lines {
+  position: absolute;
+  display: block;
+  right: -2px;
+  width: 1px;
+  height: 12px;
+  top: 12px;
+  background: #dfdfdf;
+  z-index: 3;
+}
+.global .outBar .cenBar a:hover {
+  color: #73abc9;
+}
+.global .outBar .cenBar .leftUl {
+  float: left;
+}
+.global .outBar .cenBar .leftUl>li {
+  float: left;
+  position: relative;
+}
+.global .outBar .cenBar .leftUl>li>a {
+  padding: 0 10px;
+  display: block;
+  height: 36px;
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #fafafa;
+  position: relative;
+}
+.global .outBar .cenBar .leftUl>li.prevCity>a {
+  padding-left: 0;
+}
+.global .outBar .cenBar .leftUl>li.allCity:hover>a {
+  height: 37px;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  background: #fafafa;
+  z-index: 15;
+}
+.global .outBar .cenBar .leftUl>li.allCity:hover>a i.arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+.global .outBar .cenBar .leftUl>li.allCity:hover>.hotCity {
+  display: block;
+}
+.global .outBar .cenBar .leftUl .allCity .hotCity {
+  display: none;
+  position: absolute;
+  width: 175px;
+  padding: 15px 12px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  background: #fff;
+}
+.global .outBar .cenBar .leftUl .allCity .hotCity a:hover {
+  text-decoration: underline;
+}
+.global .outBar .cenBar .leftUl .allCity .hotCity h3 {
+  line-height: 13px;
+  font-size: 13px;
+  color: #73abc9;
+  padding-bottom: 10px;
+}
+.global .outBar .cenBar .leftUl .allCity .hotCity a.moreCity {
+  line-height: 13px;
+  float: right;
+}
+.global .outBar .cenBar .leftUl .allCity .hotCity .AllHotCity {
+  font-size: 0;
+  line-height: 13px;
+  width: 210px;
+}
+.global .outBar .cenBar .leftUl .allCity .hotCity .AllHotCity a {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 25px 10px 0;
+}
+.global .outBar .cenBar .rightUl {
+  float: right;
+}
+.global .outBar .cenBar .rightUl>li {
+  float: left;
+  position: relative;
+}
+.global .outBar .cenBar .rightUl>li:hover>a i.arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+.global .outBar .cenBar .rightUl>li>a {
+  padding: 0 10px;
+  display: block;
+  height: 36px;
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #fafafa;
+  position: relative;
+}
+.global .outBar .cenBar .rightUl>li>a.collect {
+  padding-right: 0;
+}
+.global .outBar .cenBar .rightUl .mob-nuomi:hover>a,
+.global .outBar .cenBar .rightUl .my-nuomi:hover>a,
+.global .outBar .cenBar .rightUl .late-view:hover>a,
+.global .outBar .cenBar .rightUl .me-tenant:hover>a,
+.global .outBar .cenBar .rightUl .follow:hover>a {
+  height: 37px;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  background: #fafafa;
+  z-index: 15;
+}
+.global .outBar .cenBar .rightUl .mob-nuomi:hover>a .lines,
+.global .outBar .cenBar .rightUl .my-nuomi:hover>a .lines,
+.global .outBar .cenBar .rightUl .late-view:hover>a .lines,
+.global .outBar .cenBar .rightUl .me-tenant:hover>a .lines,
+.global .outBar .cenBar .rightUl .follow:hover>a .lines {
+  right: -1px;
+}
+.global .outBar .cenBar .rightUl .mob-nuomi:hover>.mob-Inner {
+  display: block;
+}
+.global .outBar .cenBar .rightUl .mob-nuomi .mob-Inner {
+  background: #fff;
+  display: none;
+  border: 1px solid #dfdfdf;
+  width: 102px;
+  position: absolute;
+  top: 36px;
+  padding: 15px 15px 10px;
+}
+.global .outBar .cenBar .rightUl .mob-nuomi .mob-Inner a.code {
+  display: block;
+  height: 142px;
+  background: url("../img/code.png") -1px 0 no-repeat;
+}
+.global .outBar .cenBar .rightUl .my-nuomi:hover>.my-Inner {
+  display: block;
+}
+.global .outBar .cenBar .rightUl .my-nuomi .my-Inner {
+  background: #fff;
+  display: none;
+  width: 80px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  position: absolute;
+}
+.global .outBar .cenBar .rightUl .my-nuomi .my-Inner>a {
+  display: block;
+  padding-left: 13px;
+  line-height: 30px;
+  color: #73abc9;
+}
+.global .outBar .cenBar .rightUl .late-view:hover>.late-Inner {
+  display: block;
+}
+.global .outBar .cenBar .rightUl .late-view .late-Inner {
+  background: #fff;
+  text-align: center;
+  display: none;
+  height: 83px;
+  width: 309px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  right: 0;
+  line-height: 83px;
+  position: absolute;
+}
+.global .outBar .cenBar .rightUl .me-tenant:hover>.tenant-Inner {
+  display: block;
+}
+.global .outBar .cenBar .rightUl .me-tenant .tenant-Inner {
+  background: #fff;
+  display: none;
+  width: 80px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  position: absolute;
+}
+.global .outBar .cenBar .rightUl .me-tenant .tenant-Inner>a {
+  display: block;
+  padding-left: 13px;
+  line-height: 30px;
+  color: #73abc9;
+}
+.global .outBar .cenBar .rightUl .follow:hover>.follow-Inner {
+  display: block;
+}
+.global .outBar .cenBar .rightUl .follow .follow-Inner {
+  background: #fff;
+  display: none;
+  border: 1px solid #dfdfdf;
+  width: 135px;
+  position: absolute;
+  top: 36px;
+  padding: 15px;
+  right: 0;
+}
+.global .outBar .cenBar .rightUl .follow .follow-Inner a.code2 {
+  display: block;
+  height: 116px;
+  width: 116px;
+  margin: auto;
+  background: url("../img/code2.png") no-repeat;
+}
+.global .outBar .cenBar .rightUl .follow .follow-Inner p {
+  text-align: center;
+  line-height: 15px;
+}
+.global .outBar .cenBar .rightUl .follow .follow-Inner p span {
+  color: #ff4883;
+}
+.global .search {
+  width: 1210px;
+  margin: 30px auto 0;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+.global .search .titIcon {
+  float: left;
+  width: 230px;
+  height: 36px;
+  background: url("../img/tit.jpg") 1px 4px no-repeat;
+  padding-top: 6px;
+}
+.global .search .rightUtils {
+  float: right;
+  padding: 7px 0;
+  border: 1px solid #ebca4d;
+  background: #feda4e;
+  position: relative;
+}
+.global .search .rightUtils a {
+  display: block;
+  height: 24px;
+  width: 50px;
+  float: left;
+  background-image: url("../img/utils.png");
+  background-repeat: no-repeat;
+}
+.global .search .rightUtils a:hover .util {
+  display: block;
+}
+.global .search .rightUtils a .util {
+  display: none;
+  position: absolute;
+  top: 46px;
+  padding: 0 12px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+}
+.global .search .rightUtils a .util span {
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+}
+.global .search .rightUtils a .util i.Icon {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 8px;
+  top: -6px;
+  background: url("../img/util-icon.png");
+}
+.global .search .rightUtils a .util1 {
+  width: 114px;
+  left: -1px;
+}
+.global .search .rightUtils a .util1 i.Icon {
+  left: 21px;
+}
+.global .search .rightUtils a .util2 {
+  width: 142px;
+  left: -1px;
+}
+.global .search .rightUtils a .util2 i.Icon {
+  left: 72px;
+}
+.global .search .rightUtils a .util3 {
+  width: 86px;
+  right: -1px;
+}
+.global .search .rightUtils a .util3 i.Icon {
+  right: 21px;
+}
+.global .search .rightUtils .top {
+  background-position: 12px 2px;
+}
+.global .search .rightUtils .mid {
+  border-left: 1px solid #ebca4d;
+  border-right: 1px solid #ebca4d;
+  background-position: -39px 2px;
+}
+.global .search .rightUtils .bot {
+  background-position: -90px 2px;
+}
+.global .search .searchInput {
+  float: right;
+  margin-right: 12px;
+  background: #fff;
+  position: relative;
+}
+.global .search .searchInput input {
+  float: left;
+  width: 407px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  border-left: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 16px 10px 20px;
+}
+.global .search .searchInput .submit {
+  width: 38px;
+  height: 38px;
+  float: left;
+  border: 1px solid #dfdfdf;
+  background: url("../img/clickprev.png");
+  cursor: pointer;
+}
+.global .search .searchInput .submit:hover {
+  background: url("../img/click.png");
+  border-color: #ff4883;
+}
+.global .search .searchInput ul.choose {
+  position: absolute;
+  right: 56px;
+  top: 10px;
+}
+.global .search .searchInput ul.choose li {
+  float: left;
+  max-width: 50px;
+  font-size: 12px;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  padding: 0 4px;
+  background: #f0f0f0;
+  margin-left: 5px;
+}
+.global .search .searchInput ul.choose li:hover {
+  background: #dfdfdf;
+}
+.global .allStore {
+  width: 1210px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+}
+.global .allStore .leftCh {
+  float: left;
+  width: 226px;
+  position: relative;
+  z-index: 2;
+  background: #87ceeb;
+}
+.global .allStore .leftCh .allClass {
+  width: 226px;
+  height: 44px;
+  background: #ff318c;
+}
+.global .allStore .leftCh .allClass span {
+  padding-left: 18px;
+  font: 18px/44px 'Microsoft YaHei';
+  color: #fff;
+}
+.global .allStore .leftCh ul.bigStoreUl {
+  position: relative;
+  width: 224px;
+}
+.global .allStore .leftCh ul.bigStoreUl>li {
+  width: 224px;
+  height: 51px;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  line-height: 51px;
+  float: left;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .show>a.bigTit {
+  display: block;
+  font-weight: 700;
+  padding-left: 20px;
+  float: left;
+  font-size: 16px;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .show>a.bigTit:hover {
+  color: #ff318c;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .show .smallTitOut {
+  padding-right: 20px;
+  float: right;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .show .smallTitOut>a.smallTit {
+  display: block;
+  float: left;
+  font-size: 12px;
+  color: #999;
+  margin-left: 12px;
+  font-family: 'Microsoft YaHei';
+}
+.global .allStore .leftCh ul.bigStoreUl>li .show .smallTitOut>a.smallTit:hover {
+  text-decoration: underline;
+  color: #005aa0;
+}
+.global .allStore .leftCh ul.bigStoreUl>li:hover .vanish {
+  display: block;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .vanish {
+  display: none;
+  clear: both;
+  position: absolute;
+  z-index: 2;
+  height: 415px;
+  padding-left: 20px;
+  width: 430px;
+  left: 225px;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding-left: 20px;
+  font-size: 12px;
+  background: #fff;
+  top: 0;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .vanish .inCl {
+  padding-top: 15px;
+  border-bottom: 1px solid #dfdfdf;
+  overflow: hidden;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .vanish .inCl h3 {
+  font-size: 12px;
+  line-height: 15px;
+  color: #313037;
+  display: block;
+  margin-bottom: 5px;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .vanish .inCl>a {
+  font-size: 12px;
+  display: inline-block;
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 7px;
+  border-right: 1px solid #dfdfdf;
+  color: #949494;
+  line-height: 15px;
+  white-space: nowrap;
+  max-width: 131px;
+}
+.global .allStore .leftCh ul.bigStoreUl>li .vanish .inCl>a:hover {
+  text-decoration: underline;
+  color: #005aa0;
+}
+.global .allStore .rightCh {
+  width: 984px;
+  height: 460px;
+  float: left;
+  background: #f00;
+  position: relative;
+  z-index: 0;
+}
+.global .allStore .rightCh ul.sele {
+  height: 44px;
+  width: 984px;
+  background: #313137;
+}
+.global .allStore .rightCh ul.sele>li {
+  float: left;
+}
