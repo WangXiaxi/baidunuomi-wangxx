@@ -11,7 +11,13 @@
 			}
 			.enterBg{
 				filter:alpha(opacity=20);
-			}		
+			}	
+			body .login .loginfrom div.codeSure{
+					*top:31px;
+			}
+			body .login .loginfrom input[name="code"]{		
+					line-height:33px\0;
+			}	
 		</style>
 	</head>
 	<body>
@@ -24,12 +30,16 @@
 					</div>
 					<div class="two">
 						<label>设置密码:</label>
-						<input type="password" class="focus1" name="password" autocomplete="off"/>
+						<input type="password" class="focus1" name="password" autocomplete="off" />
 					</div>
 					<div class="three">
 						<label>激活码:</label>
 						<input type="button" name="code" value="免费获得短信激活码" />
-						<input type="text" name="sureNum" class="focus1" autocomplete="off"/>
+						<input type="text" name="sureNum" class="focus1" autocomplete="off" />
+					</div>
+					<div class="sureCode">
+						<div class="codeSure"></div>
+						<input type="text" name="c" />
 					</div>
 					<input type="button" class="btn" name="提交" value="立即注册" />
 			</form>
@@ -100,7 +110,7 @@
 						</li>
 					</ul>
 					<ul class="rightUl">
-						<li class=""><a><span class="ver">登录</span></a></li>
+						<li class=""><a><span class="ver enterSure">登录</span></a></li>
 						<li class="mob-nuomi">
 							<a><span class="ver">手机糯米</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="mob-Inner">
@@ -293,6 +303,7 @@
 		<script type="text/javascript" src="js/data.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script>
+		$(function(){
 			clickRemove();
 			addhotcity(allCity);
 			creatAllStore(allClass);
@@ -301,6 +312,7 @@
 			creatInnerUl(allHotStore,$(".innerUl.allHotStore"));
 			creatBrandImg(brandImgSrc);
 			mouseLiLocateOpac();
+		});
 		</script>
 	</body>
 </html>

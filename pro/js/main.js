@@ -486,10 +486,22 @@ function mouseLiLocateOpac(){
 	scrollLeft();
 })(jQuery);
 (function($){
+	function clickSure(){
+		$(".enterSure").click(function(){
+			$(".enterBg").css("display","block");
+			$(".login").css("display","block");
+			$("body,html").css("overflow","hidden");
+		});
+		$(".enterBg").click(function(){
+			$(".enterBg").css("display","none");
+			$(".login").css("display","none");
+			$("body,html").css("overflow","visible");
+		});
+	}
 	function login(){
 		$("input[name=\"code\"]").click(function(){
 			if($("input[name=\"password\"]")[0].value == ""){
-				console.log("请输入密码");
+				alert("请输入密码");
 			}else{
 				$.ajax({
 					url:"http://www.ikindness.cn/api/test/message",
@@ -504,22 +516,52 @@ function mouseLiLocateOpac(){
 			}	
 		});
 		$("input[name=\"提交\"]").click(function(){
-			$.ajax({
-				url:"http://www.ikindness.cn/api/test/signUp",
-				type:"post",
-				data:{
-				tel:$("input[name=\"user\"]").val(),
-				password:$("input[name=\"password\"]").val(),
-				code:$("input[name=\"sureNum\"]").val()
-				},
-				success:function(data){
-					$("input[name=\"sureNum\"]").val(data.data);
-				}
-			});
+			if($("input[name=\"c\"]").val() != $(".codeSure").text()){
+				alert("验证码错误");
+			}else{
+				$.ajax({
+					url:"http://www.ikindness.cn/api/test/signUp",
+					type:"post",
+					data:{
+					tel:$("input[name=\"user\"]").val(),
+					password:$("input[name=\"password\"]").val(),
+					code:$("input[name=\"sureNum\"]").val()
+					},
+					success:function(data){
+						if (data.message=="success") {
+							$(".enterSure").text($("input[name=\"user\"]").val());
+							$(".enterBg").css("display","none");
+							$(".login").css("display","none");
+							$("body,html").css("overflow","visible");
+							alert("注册成功");
+						}else{
+							alert("注册失败");
+						}
+					}
+				});
+			}
 		});
 	}
+	function sureCode(){
+		var codeLength = 6,
+			codeArr = [0,1,2,3,4,5,6,7,8,9],
+			code = "";
+			for(var i = 0;i < codeLength;i++){
+				var codeIndex = Math.floor(Math.random()*10);
+				code += codeArr[codeIndex];
+			}
+			$(".codeSure").text(code);
+	}
+	function codeClick(){
+		$(".codeSure").click(function(){
+			sureCode();
+		});
+	}
+	codeClick();
+	sureCode();
+	clickSure();
 	login();
-})(jQuery)
+})(jQuery);
 
 
 					
