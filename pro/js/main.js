@@ -112,7 +112,7 @@ function clickRemove(){
 	topClickem();
 })(jQuery);
 
-(function($){
+(function($){ //smallbanner
 	var $smallBanner = $(".smallBanner");
 	var $smallButtons = $smallBanner.find(".buttons");
 	var $smallContainer = $smallBanner.find(".container");
@@ -367,7 +367,6 @@ function clickRemove(){
 	}
 	function upSup(){
 		$(".upSup").click(function(){
-			console.log(1);
 			$pubfloor.find(".allListItem").empty();
 			for(var a = 0;a < allflLen;a++){
 				for (var i = 0,len = allfloorStore[a].length; i < len; i++) {
@@ -386,7 +385,6 @@ function clickRemove(){
 	}
 	function downSup(){
 		$(".downSup").click(function(){
-			console.log(1);
 			$pubfloor.find(".allListItem").empty();
 			for(var a = 0;a < allflLen;a++){
 				for (var i = 0,len = allfloorStore[a].length; i < len; i++) {
