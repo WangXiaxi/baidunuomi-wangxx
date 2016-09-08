@@ -1,7 +1,91 @@
+body {
+  min-width: 1210px;
+}
+.enterBg {
+  display: none;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  opacity: 0.2;
+}
+.login {
+  display: none;
+  width: 350px;
+  height: 450px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -225px;
+  left: 50%;
+  margin-left: -175px;
+  z-index: 10001;
+  text-align: right;
+  font-size: 0;
+}
+.login .loginfrom {
+  padding-right: 55px;
+  padding-top: 150px;
+}
+.login .loginfrom input[name="提交"] {
+  width: 202px;
+  height: 40px;
+  background: #ff4883;
+  border-radius: 3px;
+  border: 1px solid #ff4883;
+  color: #fff;
+  box-shadow: 0px 0px 0px 1px #ccc7cc inset;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.login .loginfrom input[name="code"] {
+  width: 126px;
+  height: 32px;
+  font-size: 12px;
+  background-color: #f2f2f2;
+  line-height: 30px;
+}
+.login .loginfrom input[name="sureNum"] {
+  width: 63px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 6px;
+  padding-left: 5px;
+}
+.login .loginfrom input[name="password"] {
+  width: 195px;
+  height: 30px;
+  margin-top: 30px;
+  padding-left: 5px;
+}
+.login .loginfrom input[name="user"] {
+  width: 195px;
+  height: 30px;
+  padding-left: 5px;
+}
+.login .loginfrom .focus1:focus {
+  box-shadow: 0px 0px 1px 1px #ffb33b;
+}
+.login .loginfrom input {
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  outline: none;
+  line-height: 30px;
+}
+.login .loginfrom label {
+  font-size: 14px;
+  padding-right: 3px;
+  line-height: 32px;
+}
 .topBanner {
   width: 100%;
   height: 80px;
   position: relative;
+  overflow: hidden;
 }
 .topBanner i.remove {
   display: block;
@@ -31,7 +115,6 @@
 }
 .topBanner .top2 {
   background: #000;
-  display: none;
 }
 .topBanner .buttons {
   width: 29px;
@@ -52,9 +135,158 @@
   width: 7px;
   border-radius: 4px;
   background: #d6cccb;
+  cursor: pointer;
 }
 .topBanner .buttons em.cur {
   background: #cc395e;
+}
+.leftFixed {
+  background-color: #fff;
+  line-height: 38px;
+  font-size: 12px;
+  text-align: center;
+  z-index: 999;
+}
+.leftFixed.remove {
+  position: absolute;
+  top: 1340px;
+}
+.leftFixed.add {
+  position: fixed;
+  bottom: 50%;
+  margin-bottom: -133px;
+}
+.leftFixed ul {
+  position: relative;
+}
+.leftFixed ul li {
+  position: relative;
+  width: 38px;
+  height: 38px;
+}
+.leftFixed ul li a.lastA {
+  line-height: 20px;
+  font-weight: 700;
+  color: #666;
+}
+.leftFixed ul li a.lastA em {
+  margin: auto;
+  padding-top: 5px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #666;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.leftFixed ul li a.lastA:hover {
+  color: #ff519e;
+}
+.leftFixed ul li a.lastA:hover em {
+  border-bottom-color: #ff519e;
+}
+.leftFixed ul li a {
+  display: block;
+  color: #ff519e;
+  height: 38px;
+  width: 38px;
+  position: relative;
+  line-height: 38px;
+}
+.leftFixed ul li a:hover>i {
+  display: none;
+}
+.leftFixed ul li a i.on {
+  display: none;
+}
+.leftFixed ul li a i {
+  display: block;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  background-image: url("../img/leftfix.png");
+}
+.leftFixed ul li a i.icon-over1 {
+  background-position: -3px -2px;
+}
+.leftFixed ul li a i.icon-over2 {
+  background-position: -3px -40px;
+}
+.leftFixed ul li a i.icon-over3 {
+  background-position: -3px -78px;
+}
+.leftFixed ul li a i.icon-over4 {
+  background-position: -3px -116px;
+}
+.leftFixed ul li a i.icon-over5 {
+  background-position: -3px -154px;
+}
+.leftFixed ul li a i.icon-over6 {
+  background-position: -3px -192px;
+}
+.topFixed {
+  width: 100%;
+  min-width: 1210px;
+  height: 0;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+.topFixed .inTopFixed {
+  width: 1210px;
+  height: 50px;
+  background: url("../img/titi.png") -3px 4px no-repeat;
+  margin: 0 auto;
+  position: relative;
+}
+.topFixed .inTopFixed input {
+  width: 610px;
+  height: 14px;
+  background: #fff;
+  outline: none;
+  position: absolute;
+  top: 10px;
+  left: 282px;
+  padding: 8px 30px 8px 20px;
+}
+.topFixed .inTopFixed input:focus {
+  box-shadow: 0px 0px 1px 1px #f00;
+}
+.topFixed .inTopFixed ul.choose {
+  position: absolute;
+  right: 290px;
+  top: 16px;
+}
+.topFixed .inTopFixed ul.choose li {
+  float: left;
+  max-width: 50px;
+  font-size: 12px;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  padding: 0 4px;
+  background: #f0f0f0;
+  margin-left: 5px;
+}
+.topFixed .inTopFixed ul.choose li:hover {
+  background: #dfdfdf;
+}
+.topFixed .inTopFixed .submit {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: url("../img/click.png") -4px -4px;
+  border-color: #ff4883;
+  position: absolute;
+  right: 238px;
+  top: 10px;
 }
 .global {
   width: 100%;
@@ -75,9 +307,16 @@
   height: 36px;
   position: relative;
   margin: 0 auto;
+  font-size: 12px;
+}
+.global .outBar .cenBar span.ver {
+  float: left;
+  display: block;
 }
 .global .outBar .cenBar i.arrow {
-  display: inline-block;
+  margin-top: 15px;
+  float: left;
+  display: block;
   width: 10px;
   height: 5px;
   background: url("../img/arrow.png") no-repeat;
@@ -87,12 +326,12 @@
 .global .outBar .cenBar div.lines {
   position: absolute;
   display: block;
-  right: -2px;
+  left: -2px;
   width: 1px;
   height: 12px;
   top: 12px;
   background: #dfdfdf;
-  z-index: 3;
+  z-index: 10;
 }
 .global .outBar .cenBar a:hover {
   color: #73abc9;
@@ -103,6 +342,9 @@
 .global .outBar .cenBar .leftUl>li {
   float: left;
   position: relative;
+}
+.global .outBar .cenBar .leftUl>li:hover>a .lines {
+  left: -1px;
 }
 .global .outBar .cenBar .leftUl>li>a {
   padding: 0 10px;
@@ -199,7 +441,7 @@
 .global .outBar .cenBar .rightUl .late-view:hover>a .lines,
 .global .outBar .cenBar .rightUl .me-tenant:hover>a .lines,
 .global .outBar .cenBar .rightUl .follow:hover>a .lines {
-  right: -1px;
+  left: -1px;
 }
 .global .outBar .cenBar .rightUl .mob-nuomi:hover>.mob-Inner {
   display: block;
@@ -299,7 +541,7 @@
   margin: 30px auto 0;
   height: 60px;
   position: relative;
-  z-index: 1;
+  z-index: 9;
 }
 .global .search .titIcon {
   float: left;
@@ -431,18 +673,48 @@
 .global .search .searchInput ul.choose li:hover {
   background: #dfdfdf;
 }
+.global .search .sup {
+  height: 40px;
+  float: right;
+  position: relative;
+  width: 200px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 30px;
+  color: #999;
+  font-size: 12px;
+}
+.global .search .sup .upSup {
+  float: left;
+  width: 98px;
+  height: 38px;
+  border: 1px solid #dfdfdf;
+  cursor: pointer;
+}
+.global .search .sup .downSup {
+  float: left;
+  height: 38px;
+  width: 98px;
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  cursor: pointer;
+}
+.global .search .sup .downSup:hover,
+.global .search .sup .upSup:hover {
+  color: #ff318c;
+}
 .global .allStore {
   width: 1210px;
   margin: 0 auto;
   position: relative;
-  z-index: 0;
+  z-index: 8;
 }
 .global .allStore .leftCh {
   float: left;
   width: 226px;
   position: relative;
   z-index: 2;
-  background: #87ceeb;
 }
 .global .allStore .leftCh .allClass {
   width: 226px;
@@ -517,6 +789,7 @@
   padding-top: 15px;
   border-bottom: 1px solid #dfdfdf;
   overflow: hidden;
+  *padding-bottom: 7px;
 }
 .global .allStore .leftCh ul.bigStoreUl>li .vanish .inCl h3 {
   font-size: 12px;
@@ -536,6 +809,8 @@
   line-height: 15px;
   white-space: nowrap;
   max-width: 131px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .global .allStore .leftCh ul.bigStoreUl>li .vanish .inCl>a:hover {
   text-decoration: underline;
@@ -545,7 +820,6 @@
   width: 984px;
   height: 460px;
   float: left;
-  background: #f00;
   position: relative;
   z-index: 0;
 }
@@ -553,7 +827,719 @@
   height: 44px;
   width: 984px;
   background: #313137;
+  position: relative;
+  z-index: 2;
 }
 .global .allStore .rightCh ul.sele>li {
   float: left;
+  color: #fff;
+  position: relative;
+}
+.global .allStore .rightCh ul.sele>li:hover {
+  background: #080809;
+}
+.global .allStore .rightCh ul.sele>li:hover .seleDown {
+  display: block;
+}
+.global .allStore .rightCh ul.sele>li:hover .jt {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+.global .allStore .rightCh ul.sele>li .seleDown {
+  display: none;
+  width: 106px;
+  background: #313137;
+  position: absolute;
+  top: 44px;
+  right: 0px;
+}
+.global .allStore .rightCh ul.sele>li .seleDown>a {
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.global .allStore .rightCh ul.sele>li .seleDown>a span {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #414045;
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+.global .allStore .rightCh ul.sele>li .seleDown>a .bot {
+  border-bottom: 1px solid #313137;
+}
+.global .allStore .rightCh ul.sele>li .seleDown>a:hover {
+  background: #080809;
+}
+.global .allStore .rightCh ul.sele>li .seleDown>a:hover span {
+  border-bottom: 1px solid #080809;
+}
+.global .allStore .rightCh ul.sele>li>a {
+  display: block;
+  padding: 0 10px;
+  min-width: 86px;
+  text-align: center;
+  font: 18px/44px 'Microsoft YaHei';
+  position: relative;
+}
+.global .allStore .rightCh ul.sele>li>a.twoLiA {
+  width: 100px;
+  text-align: left;
+}
+.global .allStore .rightCh ul.sele>li>a.twoLiA .i-hot {
+  right: 8px;
+}
+.global .allStore .rightCh ul.sele>li>a.threeLiA {
+  text-align: left;
+}
+.global .allStore .rightCh ul.sele>li>a.threeLiA>span {
+  font: 18px/44px 'Microsoft YaHei';
+  padding-left: 8px;
+}
+.global .allStore .rightCh ul.sele>li>a.threeLiA .i-hot {
+  right: 19px;
+}
+.global .allStore .rightCh ul.sele>li>a.fourLiA {
+  text-align: left;
+}
+.global .allStore .rightCh ul.sele>li>a.fourLiA>span {
+  font: 18px/44px 'Microsoft YaHei';
+  padding-left: 14px;
+}
+.global .allStore .rightCh ul.sele>li>a .i-hot {
+  text-indent: 0px;
+  display: block;
+  width: 29px;
+  height: 13px;
+  background: #feda4e;
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  top: 17px;
+  text-align: center;
+  color: #000;
+  border-radius: 2px;
+}
+.global .allStore .rightCh ul.sele>li>a .jt {
+  display: block;
+  width: 0px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  right: 29px;
+  top: 22px;
+}
+.global .allStore .rightCh .bigBanner {
+  width: 737px;
+  height: 259px;
+  float: left;
+  border-right: 1px solid #dfdfdf;
+  position: relative;
+  overflow: hidden;
+}
+.global .allStore .rightCh .bigBanner:hover span.prev,
+.global .allStore .rightCh .bigBanner:hover span.next {
+  display: block;
+}
+.global .allStore .rightCh .bigBanner .prev {
+  display: none;
+  background: url("../img/next.png") 12px 10px #000 no-repeat;
+  right: 0;
+}
+.global .allStore .rightCh .bigBanner .next {
+  display: none;
+  background: url("../img/prev.png") 12px 10px #000 no-repeat;
+  left: 0;
+}
+.global .allStore .rightCh .bigBanner>span {
+  width: 40px;
+  position: absolute;
+  display: block;
+  height: 46px;
+  top: 50%;
+  margin-top: -23px;
+  z-index: 10;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.global .allStore .rightCh .bigBanner .container {
+  height: 259px;
+  position: relative;
+  left: -737px;
+}
+.global .allStore .rightCh .bigBanner .container>a {
+  display: block;
+  width: 737px;
+  float: left;
+  overflow: hidden;
+}
+.global .allStore .rightCh .bigBanner .container>a img {
+  float: left;
+  height: 259px;
+  width: 737px;
+}
+.global .allStore .rightCh .bigBanner .buttons {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 20px;
+  text-align: center;
+  font-size: 0;
+  z-index: 1;
+}
+.global .allStore .rightCh .bigBanner .buttons em {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #fff;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.global .allStore .rightCh .bigBanner .buttons em.cur {
+  background-color: #ff318c;
+}
+.global .allStore .rightCh .smallBanner {
+  width: 246px;
+  height: 259px;
+  float: left;
+  background: #87ceeb;
+  overflow: hidden;
+  position: relative;
+}
+.global .allStore .rightCh .smallBanner>.container {
+  width: 246px;
+  height: 259px;
+  position: relative;
+}
+.global .allStore .rightCh .smallBanner>.container>a {
+  display: block;
+  width: 246px;
+  height: 259px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.global .allStore .rightCh .smallBanner>.container>a img {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.global .allStore .rightCh .smallBanner>.buttons {
+  text-align: center;
+  font-size: 0;
+  position: absolute;
+  bottom: 16px;
+  height: 10px;
+  width: 100%;
+}
+.global .allStore .rightCh .smallBanner>.buttons em {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.global .allStore .rightCh .smallBanner>.buttons em.cur {
+  background-color: #ff4883;
+}
+.global .allStore .rightCh>ul.botBanner {
+  width: 984px;
+  clear: both;
+  font-family: 'Microsoft Yahei';
+}
+.global .allStore .rightCh>ul.botBanner>li {
+  position: relative;
+  float: left;
+  height: 97px;
+  width: 205px;
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 28px 10px 30px 30px;
+}
+.global .allStore .rightCh>ul.botBanner>li>div.tit {
+  padding-right: 20px;
+  line-height: 22px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+.global .allStore .rightCh>ul.botBanner>li ul.innerUl {
+  margin-top: 22px;
+  overflow: hidden;
+  height: 50px;
+  position: relative;
+  background-color: #fff;
+}
+.global .allStore .rightCh>ul.botBanner>li ul.innerUl>li {
+  float: left;
+  font-size: 12px;
+  margin-right: 20px;
+  padding-bottom: 14px;
+  position: relative;
+}
+.global .allStore .rightCh>ul.botBanner>li ul.innerUl>li a {
+  display: block;
+  float: left;
+  color: #7b7b7b;
+  line-height: 14px;
+  white-space: nowrap;
+}
+.global .allStore .rightCh>ul.botBanner>li ul.innerUl>li a:hover {
+  text-decoration: underline;
+  color: #0b5c9e;
+}
+.global .allStore .rightCh>ul.botBanner>li ul.innerUl>li a.hot {
+  color: #ff4883;
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .mouseOver {
+  position: absolute;
+  padding: 2px 1px;
+  right: 24px;
+  bottom: 48px;
+  z-index: 10;
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .mouseOver .in-icon {
+  display: block;
+  width: 0;
+  height: 7px;
+  border-top: 7px solid #666;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .mouseOver:hover+.copyTwoLi {
+  display: block;
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .copyTwoLi {
+  display: none;
+  position: absolute;
+  z-index: 12;
+  width: 100%;
+  width: 206px;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  left: 8px;
+  top: 8px;
+  padding-left: 21px;
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .copyTwoLi>div.tit {
+  padding-top: 19px;
+  line-height: 22px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-right: 21px;
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .copyTwoLi>.innerUl {
+  height: auto;
+  background-color: rgba(0,0,0,0);
+}
+.global .allStore .rightCh>ul.botBanner>li.twoLi .copyTwoLi:hover {
+  display: block;
+}
+.global .allStore .rightCh>ul.botBanner>li.fourLi {
+  background-image: url("../img/fourLi.jpg");
+  cursor: pointer;
+}
+.global .brand {
+  width: 1210px;
+  padding-top: 20px;
+  margin: 0 auto;
+  height: 369px;
+  position: relative;
+  z-index: 7;
+}
+.global .brand .leftMain {
+  float: left;
+  width: 965px;
+}
+.global .brand .leftMain>h2 {
+  height: 40px;
+}
+.global .brand .leftMain>h2 .chiTit {
+  display: block;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.global .brand .leftMain>h2 .engTit {
+  display: block;
+  float: left;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-left: 5px;
+  color: #999;
+}
+.global .brand .leftMain>h2>a {
+  display: block;
+  float: right;
+  font-size: 12px;
+  line-height: 14px;
+  color: #666;
+  height: 22px;
+  padding-top: 18px;
+}
+.global .brand .leftMain>h2>a :hover {
+  text-decoration: underline;
+}
+.global .brand .leftMain>h2>a span {
+  display: block;
+  float: left;
+}
+.global .brand .leftMain>h2>a i.i-all {
+  display: block;
+  float: left;
+  width: 7px;
+  height: 11px;
+  margin-left: 5px;
+  background: url("../img/all-arrow.png");
+}
+.global .brand .leftMain .bigImg {
+  float: left;
+  overflow: hidden;
+}
+.global .brand .leftMain .bigImg img {
+  width: 228px;
+  height: 329px;
+  float: left;
+}
+.global .brand .leftMain .allList {
+  float: left;
+  border-top: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+  width: 735px;
+  overflow: hidden;
+}
+.global .brand .leftMain .allList>a {
+  display: block;
+  float: left;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  text-align: center;
+  font-size: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 146px;
+  background: #fff;
+}
+.global .brand .leftMain .allList>a>img {
+  height: 75px;
+}
+.global .brand .rightMain {
+  float: right;
+  width: 226px;
+}
+.global .brand .rightMain>h2 {
+  height: 40px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.global .brand .rightMain>.rightMainTop {
+  display: block;
+  width: 224px;
+  height: 135px;
+  background: url("../img/rightMianTOP.jpg") 114px no-repeat;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+}
+.global .brand .rightMain>.rightMainTop:hover p.biaduTit {
+  color: #fc378c;
+}
+.global .brand .rightMain>.rightMainTop>p.biaduTit {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  padding-top: 19px;
+  padding-left: 17px;
+}
+.global .brand .rightMain>.rightMainTop>p.des {
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 17px;
+  margin-top: 8px;
+  color: #8c8c8c;
+}
+.global .brand .rightMain>.rightMainbot {
+  display: block;
+  width: 224px;
+  height: 113px;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  margin-top: 20px;
+}
+.global .brand .rightMain>.rightMainbot img {
+  width: 224px;
+  height: auto;
+}
+.global .pubFloor {
+  width: 1210px;
+  margin: 30px auto 0;
+  position: relative;
+}
+.global .pubFloor .pubTitSele {
+  height: 27px;
+  padding: 6px 0;
+  overflow: hidden;
+}
+.global .pubFloor .pubTitSele i.BigTit-icon {
+  display: block;
+  height: 27px;
+  width: 24px;
+  background: -1px 0 no-repeat;
+  float: left;
+  margin-right: 10px;
+}
+.global .pubFloor .pubTitSele h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  float: left;
+}
+.global .pubFloor .pubTitSele .choosePub {
+  float: right;
+  margin-right: -18px;
+  color: #767676;
+}
+.global .pubFloor .pubTitSele .choosePub li {
+  float: left;
+  font-size: 12px;
+  line-height: 15px;
+  padding-top: 12px;
+}
+.global .pubFloor .pubTitSele .choosePub li>a {
+  display: block;
+  padding: 0 18px;
+  border-right: 1px solid #dfdfdf;
+  overflow: hidden;
+}
+.global .pubFloor .pubTitSele .choosePub li>a:hover {
+  color: #005aa0;
+  text-decoration: underline;
+}
+.global .pubFloor .pubTitSele .choosePub li>a span {
+  display: block;
+  float: left;
+}
+.global .pubFloor .pubTitSele .choosePub li>a i.i-all {
+  display: block;
+  float: left;
+  width: 7px;
+  height: 12px;
+  margin-left: 5px;
+  background: url("../img/all-arrow.png") 0 1px no-repeat;
+}
+.global .pubFloor ul.allListItem {
+  margin-left: -5px;
+  width: 1230px;
+  position: relative;
+  overflow: hidden;
+  min-height: 30px;
+}
+.global .pubFloor ul.allListItem>li.list-item {
+  width: 226px;
+  height: 298px;
+  border: 1px solid #fff;
+  margin-right: 10px;
+  float: left;
+  margin-bottom: 40px;
+  padding: 4px;
+  position: relative;
+  background: #fff;
+}
+.global .pubFloor ul.allListItem>li.list-item:hover {
+  border-color: #ff4883;
+}
+.global .pubFloor ul.allListItem>li.list-item a.img-a {
+  display: block;
+  font-size: 0;
+  position: relative;
+}
+.global .pubFloor ul.allListItem>li.list-item a.img-a img {
+  border: 1px solid #dfdfdf;
+  width: 224px;
+  height: 135px;
+}
+.global .pubFloor ul.allListItem>li.list-item a.img-a i.free-appoint {
+  width: 56px;
+  height: 56px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url("../img/free-app.png");
+}
+.global .pubFloor ul.allListItem>li.list-item a.img-a .locate-opac {
+  display: block;
+  width: 226px;
+  height: 36px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+}
+.global .pubFloor ul.allListItem>li.list-item a.img-a .locate-opac i.locaIcon {
+  width: 12px;
+  height: 12px;
+  background: url("../img/white-locate.png") no-repeat;
+  float: left;
+  margin: 11px 3px 0;
+}
+.global .pubFloor ul.allListItem>li.list-item a.img-a .locate-opac span {
+  max-width: 205px;
+  display: block;
+  float: left;
+  font-size: 12px;
+  line-height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.global .pubFloor ul.allListItem>li.list-item a.title {
+  display: block;
+  font-size: 16px;
+  max-width: 186px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 700;
+}
+.global .pubFloor ul.allListItem>li.list-item a.title:hover {
+  color: #ff4883;
+}
+.global .pubFloor ul.allListItem>li.list-item a.des {
+  font-size: 12px;
+  color: #9e9e9e;
+  display: -webkit-box !important;
+  display: block;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.global .pubFloor ul.allListItem>li.list-item a.des:hover {
+  color: #005aa0;
+  text-decoration: underline;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPromo {
+  height: 18px;
+  padding: 2px 0 4px;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPromo span.promo {
+  padding: 0 2px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #ff4883;
+  border-radius: 2px;
+  color: #fff;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPrice {
+  line-height: 32px;
+  height: 32px;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPrice span.i-mon {
+  color: #ff4883;
+  font-size: 16px;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPrice span.curPrice {
+  color: #ff4883;
+  font-size: 24px;
+  margin: 0 5px;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPrice span.prePriceOut {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+.global .pubFloor ul.allListItem>li.list-item .outPrice span.prePriceOut span {
+  text-decoration: line-through;
+}
+.global .pubFloor ul.allListItem>li.list-item .out-sold {
+  line-height: 23px;
+  position: relative;
+}
+.global .pubFloor ul.allListItem>li.list-item .out-sold span {
+  font-size: 12px;
+}
+.global .pubFloor ul.allListItem>li.list-item .out-sold span.gold {
+  float: left;
+  color: #005aa0;
+}
+.global .pubFloor ul.allListItem>li.list-item .out-sold span.sold {
+  color: #9e9e9e;
+  float: right;
+}
+.global .pubFloor ul.allListItem>li.list-item .out-sold .lines {
+  width: 1210px;
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #dfdfdf;
+}
+.global .pubFloor a.lookAllBuy {
+  display: block;
+  width: 1208px;
+  height: 35px;
+  border: 1px solid #dfdfdf;
+  line-height: 35px;
+  text-align: center;
+  margin-top: -27px;
+  font-size: 12px;
+  color: #9e9e9e;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  *margin-top: 13px;
+}
+.global .pubFloor a.lookAllBuy i.gt {
+  display: inline-block;
+  width: 7px;
+  height: 11px;
+  margin-left: 5px;
+  background: url("../img/all-arrow.png");
+  position: relative;
+  vertical-align: middle;
+  *top: 1px;
+}
+.global .pubFloor a.lookAllBuy:hover {
+  color: #005aa0;
+  text-decoration: underline;
+}
+.global .bottomEnd {
+  width: 1210px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0;
+}
+.global .bottomEnd p {
+  line-height: 40px;
+  font-size: 12px;
+  font-family: 'Microsoft Yahei';
+  color: #666;
+}
+.global .bottomEnd p a {
+  padding: 0 20px;
+}
+.global .bottomEnd p img {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  margin-right: 3px;
+  *top: 0;
 }

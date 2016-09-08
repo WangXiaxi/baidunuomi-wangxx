@@ -4,13 +4,40 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../lib/reset.css" />
 		<link rel="stylesheet" type="text/css" href="./css/main.css" />
-		<title></title>    
+		<title></title>   
+		<style type="text/css">
+			.bigBanner>span{
+				filter:alpha(opacity=50); 
+			}
+			.enterBg{
+				filter:alpha(opacity=20);
+			}		
+		</style>
 	</head>
 	<body>
+		<div class="enterBg"></div>
+		<div class="login">
+			<form class="loginfrom">
+					<div class="one">
+						<label>手机:</label>
+						<input type="text" name="user" class="focus1" maxlength="11" placeholder="请输入11位手机号码" autocomplete="off"/>
+					</div>
+					<div class="two">
+						<label>设置密码:</label>
+						<input type="password" class="focus1" name="password" autocomplete="off"/>
+					</div>
+					<div class="three">
+						<label>激活码:</label>
+						<input type="button" name="code" value="免费获得短信激活码" />
+						<input type="text" name="sureNum" class="focus1" autocomplete="off"/>
+					</div>
+					<input type="button" class="btn" name="提交" value="立即注册" />
+			</form>
+		</div>
 		<div class="topBanner">
 			<i class="remove"></i>
 			<div class="buttons">
-				<em></em>
+				<em class="cur"></em>
 				<em></em>
 			</div>
 			<div class="top top1">
@@ -20,13 +47,49 @@
 				<div class="topIn"><a><img src="./img/top2.jpg" /></a></div>
 			</div>
 		</div>
+		<div class="leftFixed remove">
+			<ul>
+				<li>
+					<a>美食<i class="icon-over1"></i></a>
+				</li>
+				<li>
+					<a>电影<i class="icon-over2"></i></a>
+				</li>
+				<li>
+					<a>娱乐<i class="icon-over3"></i></a>
+				</li>
+				<li>
+					<a>生活<i class="icon-over4"></i></a>
+				</li>
+				<li>
+					<a>酒店<i class="icon-over5"></i></a>
+				</li>
+				<li>
+					<a>丽人<i class="icon-over6"></i></a>
+				</li>
+				<li>
+					<a class="lastA"><em></em>TOP</a>
+				</li>
+			</ul>
+		</div>
+		<div class="topFixed">
+			<div class="inTopFixed">
+				<input type="text" name="search2" placeholder="搜索商家或地点" autocomplete="off"/>
+				<div class="submit"></div>
+				<ul class="choose">
+					<li><a>外婆家</a></li>
+					<li><a>必胜客</a></li>
+					<li><a>聚优惠餐饮</a></li>
+				</ul>
+			</div>
+		</div>
 		<div class="global">
 			<div class="outBar">
 				<div class="cenBar">
 					<ul class="leftUl">
-						<li class="prevCity"><a>杭州<div class="lines"></div></a></li>
+						<li class="prevCity"><a><span class="ver">杭州</span></a></li>
 						<li class="allCity">
-							<a>切换城市<i class="arrow"></i></a>
+							<a><span class="ver">切换城市</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="hotCity">
 								<h3>热门城市</h3>
 								<div class="AllHotCity">
@@ -37,16 +100,16 @@
 						</li>
 					</ul>
 					<ul class="rightUl">
-						<li class=""><a>登录<div class="lines"></div></a></li>
+						<li class=""><a><span class="ver">登录</span></a></li>
 						<li class="mob-nuomi">
-							<a>手机糯米<i class="arrow"></i><div class="lines"></div></a>
+							<a><span class="ver">手机糯米</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="mob-Inner">
 								<a class="code"></a>
 							</div>
 						</li>
-						<li><a>我的订单<div class="lines"></div></a></li>
+						<li><a><span class="ver">我的订单</span><div class="lines"></div></a></li>
 						<li class="my-nuomi">
-							<a>我的糯米<i class="arrow"></i><div class="lines"></div></a>
+							<a><span class="ver">我的糯米</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="my-Inner">
 								<a>我的订单</a>
 								<a>选座订单</a>
@@ -59,27 +122,27 @@
 							</div>
 						</li>
 						<li class="late-view">
-							<a>最近浏览<i class="arrow"></i><div class="lines"></div></a>
+							<a><span class="ver">最近浏览</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="late-Inner">
 								<span>暂无浏览记录</span>
 							</div>
 						</li>
 						<li class="me-tenant">
-							<a>我是商家<i class="arrow"></i><div class="lines"></div></a>
+							<a><span class="ver">我是商家</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="tenant-Inner">
 								<a>商家合作</a>
 								<a>我想合作</a>
 							</div>
 						</li>
-						<li class=""><a>帮助中心<div class="lines"></div></a></li>
+						<li class=""><a><span class="ver">帮助中心</span><div class="lines"></div></a></li>
 						<li class="follow">
-							<a>关注<i class="arrow"></i><div class="lines"></div></a>
+							<a><span class="ver">关注</span><i class="arrow"></i><div class="lines"></div></a>
 							<div class="follow-Inner">
 								<a class="code2"></a>
 								<p>百度糯米:<span>nuomivip</span></p>
 							</div>
 						</li>
-						<li class=""><a class="collect">收藏</a></li>
+						<li class=""><a class="collect"><span class="ver">收藏</span><div class="lines"></div></a></li>
 					</ul>
 				</div>
 			</div>
@@ -91,7 +154,7 @@
 					<a class="bot"><div class="util util3"><span>过期自动退！</span><i class="Icon"></i></div></a>
 				</div>
 				<form class="searchInput">
-					<input type="text" name="search" placeholder="搜索商家或地点" />
+					<input type="text" name="search" placeholder="搜索商家或地点" autocomplete="off" />
 					<div class="submit"></div>
 					<ul class="choose">
 						<li><a>外婆家</a></li>
@@ -99,6 +162,10 @@
 						<li><a>聚优惠餐饮</a></li>
 					</ul>
 				</form>
+				<div class="sup">
+					<div class="upSup">上升排序</div>
+					<div class="downSup">下降排序</div>
+				</div>
 			</div>
 			<div class="allStore">
 				<div class="leftCh">
@@ -111,19 +178,129 @@
 				</div>
 				<div class="rightCh">
 					<ul class="sele">
-						
+						<li><a>首页</a></li>
+						<li><a class="twoLiA">精选品牌<i class="i-hot">Hot</i></a></li>
+						<li><a class="threeLiA"><span>电影</span><i class="i-hot">Hot</i></a></li>
+						<li><a>酒店</a></li>
+						<li>
+							<a class="fourLiA"><span>出行</span><i class="jt"></i></a>
+							<div class="seleDown">
+								<a><span>机票</span></a>
+								<a><span>火车票</span></a>
+								<a><span class="bot">汽车票</span></a>
+							</div>
+						</li>
+						<li><a>购物</a></li>
+						<li><a>外卖</a></li>
+						<li><a>今日新单</a></li>
+					</ul>
+					<div class="bigBanner">
+						<span class="prev"></span>
+						<span class="next"></span>
+					</div>
+					<div class="smallBanner">
+						<div class="container">
+							<a><img src="img/smallbanner1.jpg" /></a>
+							<a><img src="img/smallbanner2.jpg" /></a>
+						</div>
+						<div class="buttons">
+							<em></em>
+							<em></em>
+						</div>
+					</div>
+					<ul class="botBanner">
+						<li class="oneLi">
+							<div class="tit">热门团购</div>
+							<ul class="innerUl innerUlHotBuy">
+
+							</ul>
+						</li>
+						<li class="twoLi">
+							<div class="tit">全部区域</div>
+							<ul class="innerUl allLocation">
+	
+							</ul>
+							<div class="mouseOver">
+								<i class="in-icon"></i>
+							</div>
+							<div class="copyTwoLi">
+								<div class="tit">全部区域</div>
+								<ul class="innerUl allLocation">
+								
+								</ul>
+							</div>
+						</li>
+						<li class="threeLi">
+							<div class="tit">热门商圈</div>
+							<ul class="innerUl allHotStore">
+
+							</ul>
+						</li>
+						<li class="fourLi">
+						</li>
 					</ul>
 				</div>
 				<div style="clear:both;"></div>
 			</div>
-			<div class="brand" style="background:skyblue;width :1000px;height:500px;"></div>
+			<div class="brand">
+				<div class="leftMain">
+					<h2>
+						<span class="chiTit">精选品牌</span><span class="engTit">Brand selection</span><a><span>全部</span><i class="i-all"></i></a>
+					</h2>
+					<div class="bigImg">
+						<a><img src="img/bigleft.png" /></a>
+					</div>
+					<div class="allList">
+					</div>
+				</div>
+				<div class="rightMain">
+					<h2>热门专题</h2>
+					<a class="rightMainTop">
+						<p class="biaduTit">百度风云榜</p>
+						<p class="des">餐饮品类大数据</p>
+					</a>
+					<a class="rightMainbot">
+						<img src="img/rightMainBot.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="delicious-food pubFloor">
+				
+			</div>
+			<div class="all-film pubFloor">
+				
+			</div>
+			<div class="all-happy pubFloor">
+				
+			</div>
+			
+			<div class="all-hotel pubFloor">
+				
+			</div>
+			<div class="all-live pubFloor">
+				
+			</div>
+			<div class="all-beauty pubFloor">
+		
+			</div>
+			<div class="bottomEnd">
+				<p>©2016 nuomi.com<a>京ICP证030173号</a>京公网安备11010802014106号<a>营业执照信息</a></p>
+				<img src="img/bottt.png" />
+				<p class="bot"><img src="img/gonan.png" />京公网安备 11000002000001号</p>
+			</div>
 		</div>
 		<script type="text/javascript" src="../lib/jquery@1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/data.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script>
+			clickRemove();
 			addhotcity(allCity);
 			creatAllStore(allClass);
+			creatInnerUl(allUlHotBuy,$(".innerUl.innerUlHotBuy"));
+			creatInnerUl(ulLocation,$(".innerUl.allLocation"));
+			creatInnerUl(allHotStore,$(".innerUl.allHotStore"));
+			creatBrandImg(brandImgSrc);
+			mouseLiLocateOpac();
 		</script>
 	</body>
 </html>
