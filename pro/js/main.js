@@ -514,7 +514,7 @@ function mouseLiLocateOpac(){
 			}	
 		});
 		$("input[name=\"提交\"]").click(function(){
-			if($("input[name=\"c\"]").val() != $(".codeSure").text()){
+			if($("input[name=\"c\"]").val().toLowerCase() != $(".codeSure").text().toLowerCase()){
 				alert("验证码错误");
 			}else{
 				$.ajax({
@@ -534,6 +534,7 @@ function mouseLiLocateOpac(){
 							alert("注册成功");
 						}else{
 							alert("注册失败");
+							sureCode();
 						}
 					}
 				});
@@ -542,10 +543,10 @@ function mouseLiLocateOpac(){
 	}
 	function sureCode(){
 		var codeLength = 6,
-			codeArr = [0,1,2,3,4,5,6,7,8,9],
+			codeArr = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','a','b','c','d'],
 			code = "";
 			for(var i = 0;i < codeLength;i++){
-				var codeIndex = Math.floor(Math.random()*10);
+				var codeIndex = Math.floor(Math.random()*18);
 				code += codeArr[codeIndex];
 			}
 			$(".codeSure").text(code);
