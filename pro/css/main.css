@@ -372,8 +372,8 @@ body {
   padding: 0 10px;
   display: block;
   height: 36px;
-  border-left: 1px solid #fafafa;
-  border-right: 1px solid #fafafa;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   position: relative;
 }
 .global .outBar .cenBar .leftUl>li.prevCity>a {
@@ -383,7 +383,7 @@ body {
   height: 37px;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
-  background: #fafafa;
+  background: #fff;
   z-index: 15;
 }
 .global .outBar .cenBar .leftUl>li.allCity:hover>a i.arrow {
@@ -440,8 +440,8 @@ body {
   padding: 0 10px;
   display: block;
   height: 36px;
-  border-left: 1px solid #fafafa;
-  border-right: 1px solid #fafafa;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   position: relative;
 }
 .global .outBar .cenBar .rightUl>li>a.collect {
@@ -455,7 +455,7 @@ body {
   height: 37px;
   border-left: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
-  background: #fafafa;
+  background: #fff;
   z-index: 15;
 }
 .global .outBar .cenBar .rightUl .mob-nuomi:hover>a .lines,
