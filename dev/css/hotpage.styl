@@ -1,0 +1,520 @@
+body
+	min-width 1210px
+	.global
+		width 100%
+		& .outBar
+			width 100%
+			height 36px
+			border-bottom 1px solid rgb(223,223,223)
+			border-top 1px solid rgb(223,223,223)
+			position relative
+			z-index 10
+			line-height 36px
+			font-size 12px
+			color #8c8c8c
+			& .cenBar
+				width 1210px
+				height 36px
+				position relative
+				margin 0 auto
+				font-size 12px
+				& span.ver
+					float left
+					display block
+				& i.arrow
+					margin-top 15px
+					float left
+					display block
+					width 10px
+					height 5px
+					background url(../img/arrow.png) no-repeat
+					vertical-align middle
+					margin-left 2px
+				& div.lines
+					position absolute
+					display block
+					left -2px
+					width 1px
+					height 12px
+					top 12px
+					background #dfdfdf
+					z-index 10
+				& a:hover 
+					color #73ABC9
+				& .leftUl
+					float left
+					&>li
+						float left
+						position relative
+						&:hover>a .lines
+							left -1px	
+						&>a
+							padding 0 10px
+							display block
+							height 36px
+							border-left 1px solid #fff
+							border-right 1px solid #fff
+							position relative
+						&.prevCity
+							&>a
+								padding-left 0
+						&.allCity:hover>a
+							height 37px
+							border-left 1px solid #dfdfdf
+							border-right 1px solid #dfdfdf
+							background #fff
+							z-index 15
+						&.allCity:hover>a i.arrow
+							transform rotate(180deg)
+							transition transform 0.3s
+						&.allCity:hover>.hotCity
+							display block
+					& .allCity
+						.hotCity
+							display none
+							position absolute
+							width 175px
+							padding 15px 12px
+							border 1px solid #dfdfdf
+							top 36px
+							background #fff
+							& a:hover
+								text-decoration underline
+							& h3
+								line-height 13px
+								font-size 13px
+								color #73ABC9
+								padding-bottom 10px
+							& a.moreCity
+								line-height 13px
+								float right
+							& .AllHotCity
+								font-size 0
+								line-height 13px
+								width 210px
+								& a
+									font-size 12px
+									display inline-block
+									margin 0 25px 10px 0
+								
+				& .rightUl
+					float right
+					&>li
+						float left
+						position relative
+						&:hover>a i.arrow
+							transform rotate(180deg)
+							transition transform 0.3s
+						&>a
+							padding 0 10px
+							display block
+							height 36px
+							border-left 1px solid #fff
+							border-right 1px solid #fff
+							position relative
+							&.collect
+								padding-right 0
+					& .mob-nuomi,.my-nuomi,.late-view,.me-tenant,.follow
+						&:hover>a
+							height 37px
+							border-left 1px solid #dfdfdf
+							border-right 1px solid #dfdfdf
+							background #fff
+							z-index 15
+						&:hover>a .lines
+							left -1px		
+					& .mob-nuomi
+						&:hover>.mob-Inner
+							display block	
+						.mob-Inner
+							background #fff
+							display none
+							border 1px solid #dfdfdf
+							width 102px
+							position absolute
+							top 36px
+							padding 15px 15px 10px
+							& a.code
+								display block
+								height 142px
+								background url(../img/code.png) -1px 0 no-repeat
+					& .my-nuomi
+						&:hover>.my-Inner
+							display block
+						.my-Inner
+							background #fff
+							display none
+							width 80px
+							border 1px solid #dfdfdf
+							top 36px
+							position absolute
+							&>a
+								display block
+								padding-left 13px
+								line-height 30px
+								color #73ABC9
+					& .late-view
+						&:hover>.late-Inner
+							display block
+						.late-Inner
+							background #fff
+							text-align center
+							display none
+							height 83px
+							width 309px
+							border 1px solid #dfdfdf
+							top 36px
+							right 0
+							line-height 83px
+							position absolute
+					& .me-tenant
+						&:hover>.tenant-Inner
+							display block
+						.tenant-Inner
+							background #fff
+							display none
+							width 80px
+							border 1px solid #dfdfdf
+							top 36px
+							position absolute
+							
+							&>a
+								display block
+								padding-left 13px
+								line-height 30px
+								color #73ABC9
+					& .follow
+						&:hover>.follow-Inner
+							display block
+						.follow-Inner
+							background #fff
+							display none
+							border 1px solid #dfdfdf
+							width 135px
+							position absolute
+							top 36px
+							padding 15px
+							right 0
+							& a.code2
+								display block
+								height 116px
+								width 116px
+								margin auto
+								background url(../img/code2.png) no-repeat
+							& p
+								text-align center
+								line-height 15px 
+								& span
+									color #ff4883
+		& .search
+			width 1210px
+			margin 30px auto 0
+			height 60px
+			position relative
+			z-index 9
+			& .titIcon
+				float left
+				width 230px
+				height 36px
+				background url(../img/tit.jpg) 1px 4px no-repeat 
+				padding-top 6px
+			& .rightUtils
+				float right
+				padding 7px 0
+				border 1px solid #ebca4d
+				background #feda4e
+				position relative
+				& a
+					display block
+					height 24px
+					width 50px
+					float left
+					background-image url(../img/utils.png)
+					background-repeat no-repeat
+					&:hover .util
+						display block
+					& .util
+						display none
+						position absolute
+						top 46px
+						padding 0 12px
+						height 48px
+						line-height 48px
+						border 1px solid #dfdfdf
+						background #fff
+						& span
+							font-size 14px
+							font-family Microsoft YaHei
+						& i.Icon
+							display block
+							position absolute
+							height 6px
+							width 8px
+							top -6px
+							background url(../img/util-icon.png)
+					& .util1
+						width 114px
+						left -1px
+						& i.Icon
+							left 21px
+					& .util2
+						width 142px
+						left -1px
+						& i.Icon
+							left 72px
+					& .util3
+						width 86px
+						right -1px
+						& i.Icon
+							right 21px
+				& .top
+					background-position 12px 2px
+				& .mid
+					border-left 1px solid #ebca4d
+					border-right 1px solid #ebca4d	
+					background-position -39px 2px	
+				& .bot
+					background-position -90px 2px
+			& .searchInput
+				float right
+				margin-right 12px
+				background #fff
+				position relative
+				& input
+					float left
+					width 407px
+					height 18px
+					font-size 14px
+					line-height 18px
+					outline none	
+					border-left 1px solid #dfdfdf
+					border-top 1px solid #dfdfdf
+					border-bottom 1px solid #dfdfdf
+					padding 10px 16px 10px 20px
+					
+				& .submit
+					width 38px
+					height 38px
+					float left
+					border 1px solid #dfdfdf
+					background url(../img/clickprev.png)
+					cursor pointer
+					&:hover
+						background url(../img/click.png)
+						border-color #ff4883
+				& ul.choose
+					position absolute
+					right 56px
+					top 10px
+					li
+						float left
+						max-width 50px
+						font-size 12px
+						color #000000
+						overflow hidden
+						white-space nowrap
+						text-overflow ellipsis
+						line-height 18px
+						padding 0 4px
+						background #f0f0f0
+						margin-left 5px
+						&:hover
+							background #dfdfdf	
+		& .allStore
+			width 1210px
+			margin 0 auto
+			position relative
+			z-index 8
+			& .leftCh
+				float left
+				width 226px
+				position relative
+				z-index 2
+				& .allClass
+					width 226px
+					height 44px
+					background #ff318c
+					span
+						padding-left 18px
+						font: 18px/44px 'Microsoft YaHei'
+						color #fff
+			& .rightCh
+				width 984px
+				float left
+				position relative
+				z-index 0
+				ul.sele
+					height 44px
+					width 984px
+					background rgb(49, 49, 55)
+					position relative 
+					z-index 2 
+					&>li
+						float left
+						color #fff
+						position relative
+						&:hover
+							background rgb(8,8,9)
+							& .seleDown
+								display block
+							& .jt
+								transform rotate(180deg)
+								transition transform 0.3s
+						& .seleDown
+							display none
+							width 106px
+							background rgb(49, 49, 55)
+							position absolute
+							top 44px
+							right 0px
+							&>a
+								font-size 16px
+								display block
+								margin 0 auto
+								text-align center
+								& span
+									display block
+									width 80%
+									margin 0 auto
+									border-bottom 1px solid #414045
+									padding-top 12px
+									padding-bottom 11px
+								& .bot
+									border-bottom 1px solid rgb(49, 49, 55)
+								&:hover
+									background rgb(8,8,9)
+									& span
+										border-bottom 1px solid rgb(8,8,9)
+									
+					
+						&>a
+							display block
+							padding 0 10px
+							min-width 86px
+							text-align center
+							font: 18px/44px 'Microsoft YaHei'
+							position relative
+							&.twoLiA
+								width 100px
+								text-align left
+								background rgb(8,8,9)
+								& .i-hot
+									right 8px
+							&.threeLiA
+								text-align left
+								&>span
+									font: 18px/44px 'Microsoft YaHei'
+									padding-left 8px
+								& .i-hot
+									right 19px
+							&.fourLiA
+								text-align left
+								&>span
+									font: 18px/44px 'Microsoft YaHei'
+									padding-left 14px
+							& .i-hot
+								text-indent 0px
+								display block
+								width 29px
+								height 13px
+								background #feda4e
+								font-size 12px
+								line-height 14px
+								position absolute
+								top 17px
+								text-align center
+								color #000
+								border-radius 2px
+							& .jt
+								display block
+								width 0px
+								border-top 4px solid #fff
+								border-left 4px solid transparent
+								border-right 5px solid transparent
+								position absolute
+								right 29px
+								top 22px
+			& .startTime
+				clear both
+				width 100%
+				height 296px
+				background url(../img/dinshi.png)
+				position relative
+				& .pubTime
+					position absolute
+					font-size 26px
+					color #fff
+					top 154px
+					& .st
+						margin-right 6px
+					& .en
+						margin-left 5px
+				& .oneTime
+					left 382px
+					*left 384px
+				& .twoTime
+					left 573px
+					*left 575px
+				& .time
+					width 78px
+					height 68px
+					position absolute
+					top 190px
+					text-align center
+					font-size 50px
+					line-height 68px
+					color #fff
+					text-shadow 2px 2px 0 #faa800 
+				& .hours
+					left 436px
+				& .minute
+					left 541px
+				& .second
+					left 649px
+				& .desTime
+					position absolute
+					width 100px
+					font-size 24px
+					height 32px
+					line-height 32px
+					left 320px
+					bottom 55px
+					text-align center
+					color #fff
+					font-family "Microsoft YaHei"
+@media (max-width 1210px)
+	body
+		min-width 980px
+		.global
+			& .outBar
+				& .cenBar
+					width 980px
+			& .search
+				width 980px
+			& .allStore
+				width 980px
+				& .leftCh
+					width 150px
+					& .allClass
+						width 150px
+				& .rightCh
+					width 830px
+					& ul.sele
+						width 830px
+				& .startTime
+					width 100%
+					height 296px
+					background url(../img/dinshi.png) -115px 0 no-repeat
+					& .oneTime
+						left 267px
+					& .twoTime
+						left 458px
+					& .hours
+						left 321px
+					& .minute
+						left 426px
+					& .second
+						left 534px
+					& .desTime
+						left 205px
+					

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../lib/reset.css" />
+	<link rel="stylesheet" type="text/css" href="./css/hotpage.css" />
+	<!--[if IE 8]>
+		<style>
+			body .global .allStore .startTime .oneTime{
+				left:384px;
+			}
+			body .global .allStore .startTime .twoTime{
+				left:575px;
+			}
+		</style>
+	<![endif]-->
+</head>
+<body>
+	<div class="global">
+		<div class="outBar">
+			<div class="cenBar">
+				<ul class="leftUl">
+					<li class="prevCity"><a><span class="ver">杭州</span></a></li>
+					<li class="allCity">
+						<a><span class="ver">切换城市</span><i class="arrow"></i><div class="lines"></div></a>
+						<div class="hotCity">
+							<h3>热门城市</h3>
+							<div class="AllHotCity">
+
+							</div>
+							<a class="moreCity">更多城市 ></a>
+						</div>
+					</li>
+				</ul>
+				<ul class="rightUl">
+					<li class=""><a><span class="ver enterSure">登录</span></a></li>
+					<li class="mob-nuomi">
+						<a><span class="ver">手机糯米</span><i class="arrow"></i><div class="lines"></div></a>
+						<div class="mob-Inner">
+							<a class="code"></a>
+						</div>
+					</li>
+					<li><a><span class="ver">我的订单</span><div class="lines"></div></a></li>
+					<li class="my-nuomi">
+						<a><span class="ver">我的糯米</span><i class="arrow"></i><div class="lines"></div></a>
+						<div class="my-Inner">
+							<a>我的订单</a>
+							<a>选座订单</a>
+							<a>我的收藏</a>
+							<a>我的评论</a>
+							<a>我的余额</a>
+							<a>我的优惠券</a>
+							<a>账户设置</a>
+							<a>我的百度</a>
+						</div>
+					</li>
+					<li class="late-view">
+						<a><span class="ver">最近浏览</span><i class="arrow"></i><div class="lines"></div></a>
+						<div class="late-Inner">
+							<span>暂无浏览记录</span>
+						</div>
+					</li>
+					<li class="me-tenant">
+						<a><span class="ver">我是商家</span><i class="arrow"></i><div class="lines"></div></a>
+						<div class="tenant-Inner">
+							<a>商家合作</a>
+							<a>我想合作</a>
+						</div>
+					</li>
+					<li class=""><a><span class="ver">帮助中心</span><div class="lines"></div></a></li>
+					<li class="follow">
+						<a><span class="ver">关注</span><i class="arrow"></i><div class="lines"></div></a>
+						<div class="follow-Inner">
+							<a class="code2"></a>
+							<p>百度糯米:<span>nuomivip</span></p>
+						</div>
+					</li>
+					<li class=""><a class="collect"><span class="ver">收藏</span><div class="lines"></div></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="search">
+			<div class="titIcon"></div>
+			<div class="rightUtils">
+				<a class="top"><div class="util util1"><span>未消费，随便退！</span><i class="Icon"></i></div></a>
+				<a class="mid"><div class="util util2"><span>消费不满意先行赔付！</span><i class="Icon"></i></div></a>
+				<a class="bot"><div class="util util3"><span>过期自动退！</span><i class="Icon"></i></div></a>
+			</div>
+			<form class="searchInput">
+				<input type="text" name="search" placeholder="搜索商家或地点" autocomplete="off" />
+				<div class="submit"></div>
+				<ul class="choose">
+					<li><a>外婆家</a></li>
+					<li><a>必胜客</a></li>
+					<li><a>聚优惠餐饮</a></li>
+				</ul>
+			</form>
+		</div>
+		<div class="allStore">
+			<div class="leftCh">
+				<div class="allClass">
+					<span>全部分类</span>
+				</div>
+			</div>
+			<div class="rightCh">
+				<ul class="sele">
+					<li><a href="index.html" target="_self" style="color:#fff;">首页</a></li>
+					<li><a class="twoLiA">精选品牌<i class="i-hot">Hot</i></a></li>
+					<li><a class="threeLiA"><span>电影</span><i class="i-hot">Hot</i></a></li>
+					<li><a>酒店</a></li>
+					<li>
+						<a class="fourLiA"><span>出行</span><i class="jt"></i></a>
+						<div class="seleDown">
+							<a><span>机票</span></a>
+							<a><span>火车票</span></a>
+							<a><span class="bot">汽车票</span></a>
+						</div>
+					</li>
+					<li><a>购物</a></li>
+					<li><a>外卖</a></li>
+				</ul>
+			</div>
+			<div class="startTime">
+				<div class="pubTime oneTime"><span class="st st1">10:00</span>-<span class="en end1">14:00</span></div>
+				<div class="pubTime twoTime"><span class="st st1">17:00</span>-<span class="en end1">21:00</span></div>
+				<div class="hours time"></div>
+				<div class="minute time"></div>
+				<div class="second time"></div>
+				<div class="desTime"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../lib/jquery@1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/hotpage.js"></script>
+	<script>
+		$(function(){
+			addhotcity(allCity);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+body {
+  min-width: 1210px;
+}
+body .global {
+  width: 100%;
+}
+body .global .outBar {
+  width: 100%;
+  height: 36px;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  position: relative;
+  z-index: 10;
+  line-height: 36px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+body .global .outBar .cenBar {
+  width: 1210px;
+  height: 36px;
+  position: relative;
+  margin: 0 auto;
+  font-size: 12px;
+}
+body .global .outBar .cenBar span.ver {
+  float: left;
+  display: block;
+}
+body .global .outBar .cenBar i.arrow {
+  margin-top: 15px;
+  float: left;
+  display: block;
+  width: 10px;
+  height: 5px;
+  background: url("../img/arrow.png") no-repeat;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+body .global .outBar .cenBar div.lines {
+  position: absolute;
+  display: block;
+  left: -2px;
+  width: 1px;
+  height: 12px;
+  top: 12px;
+  background: #dfdfdf;
+  z-index: 10;
+}
+body .global .outBar .cenBar a:hover {
+  color: #73abc9;
+}
+body .global .outBar .cenBar .leftUl {
+  float: left;
+}
+body .global .outBar .cenBar .leftUl>li {
+  float: left;
+  position: relative;
+}
+body .global .outBar .cenBar .leftUl>li:hover>a .lines {
+  left: -1px;
+}
+body .global .outBar .cenBar .leftUl>li>a {
+  padding: 0 10px;
+  display: block;
+  height: 36px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: relative;
+}
+body .global .outBar .cenBar .leftUl>li.prevCity>a {
+  padding-left: 0;
+}
+body .global .outBar .cenBar .leftUl>li.allCity:hover>a {
+  height: 37px;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  background: #fff;
+  z-index: 15;
+}
+body .global .outBar .cenBar .leftUl>li.allCity:hover>a i.arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+body .global .outBar .cenBar .leftUl>li.allCity:hover>.hotCity {
+  display: block;
+}
+body .global .outBar .cenBar .leftUl .allCity .hotCity {
+  display: none;
+  position: absolute;
+  width: 175px;
+  padding: 15px 12px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  background: #fff;
+}
+body .global .outBar .cenBar .leftUl .allCity .hotCity a:hover {
+  text-decoration: underline;
+}
+body .global .outBar .cenBar .leftUl .allCity .hotCity h3 {
+  line-height: 13px;
+  font-size: 13px;
+  color: #73abc9;
+  padding-bottom: 10px;
+}
+body .global .outBar .cenBar .leftUl .allCity .hotCity a.moreCity {
+  line-height: 13px;
+  float: right;
+}
+body .global .outBar .cenBar .leftUl .allCity .hotCity .AllHotCity {
+  font-size: 0;
+  line-height: 13px;
+  width: 210px;
+}
+body .global .outBar .cenBar .leftUl .allCity .hotCity .AllHotCity a {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 25px 10px 0;
+}
+body .global .outBar .cenBar .rightUl {
+  float: right;
+}
+body .global .outBar .cenBar .rightUl>li {
+  float: left;
+  position: relative;
+}
+body .global .outBar .cenBar .rightUl>li:hover>a i.arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+body .global .outBar .cenBar .rightUl>li>a {
+  padding: 0 10px;
+  display: block;
+  height: 36px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: relative;
+}
+body .global .outBar .cenBar .rightUl>li>a.collect {
+  padding-right: 0;
+}
+body .global .outBar .cenBar .rightUl .mob-nuomi:hover>a,
+body .global .outBar .cenBar .rightUl .my-nuomi:hover>a,
+body .global .outBar .cenBar .rightUl .late-view:hover>a,
+body .global .outBar .cenBar .rightUl .me-tenant:hover>a,
+body .global .outBar .cenBar .rightUl .follow:hover>a {
+  height: 37px;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  background: #fff;
+  z-index: 15;
+}
+body .global .outBar .cenBar .rightUl .mob-nuomi:hover>a .lines,
+body .global .outBar .cenBar .rightUl .my-nuomi:hover>a .lines,
+body .global .outBar .cenBar .rightUl .late-view:hover>a .lines,
+body .global .outBar .cenBar .rightUl .me-tenant:hover>a .lines,
+body .global .outBar .cenBar .rightUl .follow:hover>a .lines {
+  left: -1px;
+}
+body .global .outBar .cenBar .rightUl .mob-nuomi:hover>.mob-Inner {
+  display: block;
+}
+body .global .outBar .cenBar .rightUl .mob-nuomi .mob-Inner {
+  background: #fff;
+  display: none;
+  border: 1px solid #dfdfdf;
+  width: 102px;
+  position: absolute;
+  top: 36px;
+  padding: 15px 15px 10px;
+}
+body .global .outBar .cenBar .rightUl .mob-nuomi .mob-Inner a.code {
+  display: block;
+  height: 142px;
+  background: url("../img/code.png") -1px 0 no-repeat;
+}
+body .global .outBar .cenBar .rightUl .my-nuomi:hover>.my-Inner {
+  display: block;
+}
+body .global .outBar .cenBar .rightUl .my-nuomi .my-Inner {
+  background: #fff;
+  display: none;
+  width: 80px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  position: absolute;
+}
+body .global .outBar .cenBar .rightUl .my-nuomi .my-Inner>a {
+  display: block;
+  padding-left: 13px;
+  line-height: 30px;
+  color: #73abc9;
+}
+body .global .outBar .cenBar .rightUl .late-view:hover>.late-Inner {
+  display: block;
+}
+body .global .outBar .cenBar .rightUl .late-view .late-Inner {
+  background: #fff;
+  text-align: center;
+  display: none;
+  height: 83px;
+  width: 309px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  right: 0;
+  line-height: 83px;
+  position: absolute;
+}
+body .global .outBar .cenBar .rightUl .me-tenant:hover>.tenant-Inner {
+  display: block;
+}
+body .global .outBar .cenBar .rightUl .me-tenant .tenant-Inner {
+  background: #fff;
+  display: none;
+  width: 80px;
+  border: 1px solid #dfdfdf;
+  top: 36px;
+  position: absolute;
+}
+body .global .outBar .cenBar .rightUl .me-tenant .tenant-Inner>a {
+  display: block;
+  padding-left: 13px;
+  line-height: 30px;
+  color: #73abc9;
+}
+body .global .outBar .cenBar .rightUl .follow:hover>.follow-Inner {
+  display: block;
+}
+body .global .outBar .cenBar .rightUl .follow .follow-Inner {
+  background: #fff;
+  display: none;
+  border: 1px solid #dfdfdf;
+  width: 135px;
+  position: absolute;
+  top: 36px;
+  padding: 15px;
+  right: 0;
+}
+body .global .outBar .cenBar .rightUl .follow .follow-Inner a.code2 {
+  display: block;
+  height: 116px;
+  width: 116px;
+  margin: auto;
+  background: url("../img/code2.png") no-repeat;
+}
+body .global .outBar .cenBar .rightUl .follow .follow-Inner p {
+  text-align: center;
+  line-height: 15px;
+}
+body .global .outBar .cenBar .rightUl .follow .follow-Inner p span {
+  color: #ff4883;
+}
+body .global .search {
+  width: 1210px;
+  margin: 30px auto 0;
+  height: 60px;
+  position: relative;
+  z-index: 9;
+}
+body .global .search .titIcon {
+  float: left;
+  width: 230px;
+  height: 36px;
+  background: url("../img/tit.jpg") 1px 4px no-repeat;
+  padding-top: 6px;
+}
+body .global .search .rightUtils {
+  float: right;
+  padding: 7px 0;
+  border: 1px solid #ebca4d;
+  background: #feda4e;
+  position: relative;
+}
+body .global .search .rightUtils a {
+  display: block;
+  height: 24px;
+  width: 50px;
+  float: left;
+  background-image: url("../img/utils.png");
+  background-repeat: no-repeat;
+}
+body .global .search .rightUtils a:hover .util {
+  display: block;
+}
+body .global .search .rightUtils a .util {
+  display: none;
+  position: absolute;
+  top: 46px;
+  padding: 0 12px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+}
+body .global .search .rightUtils a .util span {
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+}
+body .global .search .rightUtils a .util i.Icon {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 8px;
+  top: -6px;
+  background: url("../img/util-icon.png");
+}
+body .global .search .rightUtils a .util1 {
+  width: 114px;
+  left: -1px;
+}
+body .global .search .rightUtils a .util1 i.Icon {
+  left: 21px;
+}
+body .global .search .rightUtils a .util2 {
+  width: 142px;
+  left: -1px;
+}
+body .global .search .rightUtils a .util2 i.Icon {
+  left: 72px;
+}
+body .global .search .rightUtils a .util3 {
+  width: 86px;
+  right: -1px;
+}
+body .global .search .rightUtils a .util3 i.Icon {
+  right: 21px;
+}
+body .global .search .rightUtils .top {
+  background-position: 12px 2px;
+}
+body .global .search .rightUtils .mid {
+  border-left: 1px solid #ebca4d;
+  border-right: 1px solid #ebca4d;
+  background-position: -39px 2px;
+}
+body .global .search .rightUtils .bot {
+  background-position: -90px 2px;
+}
+body .global .search .searchInput {
+  float: right;
+  margin-right: 12px;
+  background: #fff;
+  position: relative;
+}
+body .global .search .searchInput input {
+  float: left;
+  width: 407px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  border-left: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 16px 10px 20px;
+}
+body .global .search .searchInput .submit {
+  width: 38px;
+  height: 38px;
+  float: left;
+  border: 1px solid #dfdfdf;
+  background: url("../img/clickprev.png");
+  cursor: pointer;
+}
+body .global .search .searchInput .submit:hover {
+  background: url("../img/click.png");
+  border-color: #ff4883;
+}
+body .global .search .searchInput ul.choose {
+  position: absolute;
+  right: 56px;
+  top: 10px;
+}
+body .global .search .searchInput ul.choose li {
+  float: left;
+  max-width: 50px;
+  font-size: 12px;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  padding: 0 4px;
+  background: #f0f0f0;
+  margin-left: 5px;
+}
+body .global .search .searchInput ul.choose li:hover {
+  background: #dfdfdf;
+}
+body .global .allStore {
+  width: 1210px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 8;
+}
+body .global .allStore .leftCh {
+  float: left;
+  width: 226px;
+  position: relative;
+  z-index: 2;
+}
+body .global .allStore .leftCh .allClass {
+  width: 226px;
+  height: 44px;
+  background: #ff318c;
+}
+body .global .allStore .leftCh .allClass span {
+  padding-left: 18px;
+  font: 18px/44px 'Microsoft YaHei';
+  color: #fff;
+}
+body .global .allStore .rightCh {
+  width: 984px;
+  float: left;
+  position: relative;
+  z-index: 0;
+}
+body .global .allStore .rightCh ul.sele {
+  height: 44px;
+  width: 984px;
+  background: #313137;
+  position: relative;
+  z-index: 2;
+}
+body .global .allStore .rightCh ul.sele>li {
+  float: left;
+  color: #fff;
+  position: relative;
+}
+body .global .allStore .rightCh ul.sele>li:hover {
+  background: #080809;
+}
+body .global .allStore .rightCh ul.sele>li:hover .seleDown {
+  display: block;
+}
+body .global .allStore .rightCh ul.sele>li:hover .jt {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+body .global .allStore .rightCh ul.sele>li .seleDown {
+  display: none;
+  width: 106px;
+  background: #313137;
+  position: absolute;
+  top: 44px;
+  right: 0px;
+}
+body .global .allStore .rightCh ul.sele>li .seleDown>a {
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+body .global .allStore .rightCh ul.sele>li .seleDown>a span {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #414045;
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+body .global .allStore .rightCh ul.sele>li .seleDown>a .bot {
+  border-bottom: 1px solid #313137;
+}
+body .global .allStore .rightCh ul.sele>li .seleDown>a:hover {
+  background: #080809;
+}
+body .global .allStore .rightCh ul.sele>li .seleDown>a:hover span {
+  border-bottom: 1px solid #080809;
+}
+body .global .allStore .rightCh ul.sele>li>a {
+  display: block;
+  padding: 0 10px;
+  min-width: 86px;
+  text-align: center;
+  font: 18px/44px 'Microsoft YaHei';
+  position: relative;
+}
+body .global .allStore .rightCh ul.sele>li>a.twoLiA {
+  width: 100px;
+  text-align: left;
+  background: #080809;
+}
+body .global .allStore .rightCh ul.sele>li>a.twoLiA .i-hot {
+  right: 8px;
+}
+body .global .allStore .rightCh ul.sele>li>a.threeLiA {
+  text-align: left;
+}
+body .global .allStore .rightCh ul.sele>li>a.threeLiA>span {
+  font: 18px/44px 'Microsoft YaHei';
+  padding-left: 8px;
+}
+body .global .allStore .rightCh ul.sele>li>a.threeLiA .i-hot {
+  right: 19px;
+}
+body .global .allStore .rightCh ul.sele>li>a.fourLiA {
+  text-align: left;
+}
+body .global .allStore .rightCh ul.sele>li>a.fourLiA>span {
+  font: 18px/44px 'Microsoft YaHei';
+  padding-left: 14px;
+}
+body .global .allStore .rightCh ul.sele>li>a .i-hot {
+  text-indent: 0px;
+  display: block;
+  width: 29px;
+  height: 13px;
+  background: #feda4e;
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  top: 17px;
+  text-align: center;
+  color: #000;
+  border-radius: 2px;
+}
+body .global .allStore .rightCh ul.sele>li>a .jt {
+  display: block;
+  width: 0px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  right: 29px;
+  top: 22px;
+}
+body .global .allStore .startTime {
+  clear: both;
+  width: 100%;
+  height: 296px;
+  background: url("../img/dinshi.png");
+  position: relative;
+}
+body .global .allStore .startTime .pubTime {
+  position: absolute;
+  font-size: 26px;
+  color: #fff;
+  top: 154px;
+}
+body .global .allStore .startTime .pubTime .st {
+  margin-right: 6px;
+}
+body .global .allStore .startTime .pubTime .en {
+  margin-left: 5px;
+}
+body .global .allStore .startTime .oneTime {
+  left: 382px;
+  *left: 384px;
+}
+body .global .allStore .startTime .twoTime {
+  left: 573px;
+  *left: 575px;
+}
+body .global .allStore .startTime .time {
+  width: 78px;
+  height: 68px;
+  position: absolute;
+  top: 190px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 68px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #faa800;
+}
+body .global .allStore .startTime .hours {
+  left: 436px;
+}
+body .global .allStore .startTime .minute {
+  left: 541px;
+}
+body .global .allStore .startTime .second {
+  left: 649px;
+}
+body .global .allStore .startTime .desTime {
+  position: absolute;
+  width: 100px;
+  font-size: 24px;
+  height: 32px;
+  line-height: 32px;
+  left: 320px;
+  bottom: 55px;
+  text-align: center;
+  color: #fff;
+  font-family: "Microsoft YaHei";
+}
+@media (max-width: 1210px) {
+  body {
+    min-width: 980px;
+  }
+  body .global .outBar .cenBar {
+    width: 980px;
+  }
+  body .global .search {
+    width: 980px;
+  }
+  body .global .allStore {
+    width: 980px;
+  }
+  body .global .allStore .leftCh {
+    width: 150px;
+  }
+  body .global .allStore .leftCh .allClass {
+    width: 150px;
+  }
+  body .global .allStore .rightCh {
+    width: 830px;
+  }
+  body .global .allStore .rightCh ul.sele {
+    width: 830px;
+  }
+  body .global .allStore .startTime {
+    width: 100%;
+    height: 296px;
+    background: url("../img/dinshi.png") -115px 0 no-repeat;
+  }
+  body .global .allStore .startTime .oneTime {
+    left: 267px;
+  }
+  body .global .allStore .startTime .twoTime {
+    left: 458px;
+  }
+  body .global .allStore .startTime .hours {
+    left: 321px;
+  }
+  body .global .allStore .startTime .minute {
+    left: 426px;
+  }
+  body .global .allStore .startTime .second {
+    left: 534px;
+  }
+  body .global .allStore .startTime .desTime {
+    left: 205px;
+  }
+}
