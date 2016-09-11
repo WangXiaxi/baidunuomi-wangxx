@@ -325,7 +325,7 @@ function clickRemove(){
 						'<li class="list-item">'+
 							'<a class="img-a">'+
 								'<i class="free-appoint"></i>'+
-								'<img src="https:' + listItem[x].imgSrc + '" />'+
+								'<img src="https:' + listItem[x].imgSrc + '" onerror="this.src=\'img/loading.png\'" />'+
 								'<div class="locate-opac">'+
 									'<i class="locaIcon"></i>'+
 									'<span class="location">' + listItem[x].location + '</span>'+

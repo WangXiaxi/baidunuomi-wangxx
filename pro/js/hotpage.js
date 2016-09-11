@@ -4,6 +4,11 @@ function addhotcity(allCity) {
 		$(".AllHotCity").append("<a>" + allCity[i].tit + "</a>");
 	}
 }
+function clickFix() {
+	$(".fix").click(function(){
+		$("body,html").animate({scrollTop:0});
+	});
+}
 (function($){ //定时
 	function setTime(){
 		var interval = 1000,
@@ -38,8 +43,6 @@ function addhotcity(allCity) {
 			$hours.text(numTwo(hour));
 			$minute.text(numTwo(minute));
 			$second.text(numTwo(second));
-			console.log(hour,minute,second,prevHours);		
-	 
 		} 
 		setInterval(function(){
 			now = new Date(); 
@@ -73,4 +76,104 @@ function addhotcity(allCity) {
 	}
 
 	setTime();
+})(jQuery);
+(function($){
+	var $allUl = $(".allUl");
+	var NumArr = [];
+	var num = 15;
+	var numScr = 15; 
+	var data = hotpage.data;
+	function scrollLoading(data){
+		$(window).scroll(function(){
+			var scrollTop = $(this).scrollTop();
+			if (scrollTop > 100) {
+				$(".fix").css("display","block");
+			}else{
+				$(".fix").css("display","none");
+			}
+			if(scrollTop >= ($(document).height()-$(this).height())){
+				if (data.length < num) {
+					return;
+				}
+			var numEnd = num + numScr;
+				NumArr =data.slice(num,numEnd);
+				num = numEnd;
+				creatD(NumArr,NumArr.length);
+			}
+		});
+	}
+	function clickFreeApp(){
+		var freeA = [];
+		for(var i = 0;i < data.length;i++){
+			if(data[i].appiont == "免预约"){
+				freeA.push(data[i]);
+			}
+		}
+		$(".freeApp").click(function(){
+			$(this).find("i").addClass("on");
+			$(this).siblings(".card").find("i").removeClass("on");
+			num = 15;
+			numScr = 15;
+			$(window).scrollTop(0);
+			$allUl.empty();
+			creatD(freeA,num);
+			$(window).unbind("scroll");
+			scrollLoading(freeA);
+		});
+	}
+	function clickCard(){
+		var freeA = [];
+		for(var i = 0;i < data.length;i++){
+			if(data[i].des.indexOf("代金券") > 0){
+				freeA.push(data[i]);
+			}	
+		}
+		$(".card").click(function(){
+			$(this).find("i").addClass("on");
+			$(this).siblings(".freeApp").find("i").removeClass("on");
+			num = 15;
+			numScr = 15;
+			$(window).scrollTop(0);
+			$allUl.empty();
+			creatD(freeA,num);
+			$(window).unbind("scroll");
+			scrollLoading(freeA);
+		});
+	}
+	function creatD(data,len){
+		for(var i = 0;i < len;i++){
+			if (data[i].gold == "") {
+				data[i].gold = "0人已评价";
+			}
+			$allUl.append(
+				'<li class="list-item">'+
+					'<a class="img-a">'+
+						'<i class="free-appoint"></i>'+
+						'<img src="' + data[i].imgs + '" onerror="this.src=\'img/loading.png\'" />'+
+					'</a>'+
+					'<a class="title">' + data[i].name + '</a>'+
+					'<a class="des">' + data[i].des + '</a>'+
+					'<div class="outPrice">'+
+						'<span class="i-mon">¥</span><span class="curPrice">' + data[i].curPrice.replace(/¥/,"") + '</span>'+
+						'<span class="prePriceOut">价值<span class="prePrice">' + data[i].prePrice + '</span></span>'+
+						'<i class="ticket-icon"></i>'+
+					'</div>'+
+					'<div class="line"></div>'+
+					'<div class="out-sold">'+
+						'<span class="gold">' + data[i].sold + '</span>'+
+						'<span class="sold">' + data[i].gold + '</span>'+
+					'</div>'+
+				'</li>'
+			);
+			if (data[i].appiont == "") {
+				$allUl.find("li").eq(i+num-numScr).find("i.free-appoint").remove();
+			}else if(data[i].des.indexOf("代金券") > 0){
+				$allUl.find("li").eq(i+num-numScr).find("i.ticket-icon").addClass("on1");
+			}
+		}
+	}
+	clickFreeApp();
+	clickCard();
+	creatD(data,num);
+	scrollLoading(data);
 })(jQuery);

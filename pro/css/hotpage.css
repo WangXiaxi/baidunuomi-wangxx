@@ -1,6 +1,43 @@
 body {
   min-width: 1210px;
 }
+body .fix {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  display: none;
+  z-index: 99999;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  background: #fff;
+}
+body .fix:hover {
+  border-color: #ff4883;
+}
+body .fix:hover span {
+  color: #ff4883;
+}
+body .fix:hover i {
+  border-bottom-color: #ff4883;
+}
+body .fix span {
+  line-height: 65px;
+  color: #9e9e9e;
+}
+body .fix i {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 16px;
+  top: 7px;
+  border-bottom: 14px solid #9e9e9e;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
+}
 body .global {
   width: 100%;
 }
@@ -412,7 +449,7 @@ body .global .allStore .rightCh {
   width: 984px;
   float: left;
   position: relative;
-  z-index: 0;
+  z-index: 2;
 }
 body .global .allStore .rightCh ul.sele {
   height: 44px;
@@ -530,6 +567,7 @@ body .global .allStore .startTime {
   height: 296px;
   background: url("../img/dinshi.png");
   position: relative;
+  z-index: 0;
 }
 body .global .allStore .startTime .pubTime {
   position: absolute;
@@ -583,6 +621,208 @@ body .global .allStore .startTime .desTime {
   color: #fff;
   font-family: "Microsoft YaHei";
 }
+body .global .mainFloor {
+  width: 1210px;
+  margin: auto;
+  position: relative;
+}
+body .global .mainFloor .topChoo {
+  width: 100%;
+  height: 43px;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  font-size: 0;
+}
+body .global .mainFloor .topChoo i {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/box.png");
+  top: 14px;
+  left: 0;
+}
+body .global .mainFloor .topChoo i.on {
+  background-image: url("../img/box2.png");
+}
+body .global .mainFloor .topChoo .puba {
+  font-size: 12px;
+  display: inline-block;
+  line-height: 43px;
+  color: #767676;
+  position: relative;
+  padding-left: 18px;
+  margin-left: 10px;
+}
+body .global .mainFloor .allBuy {
+  margin-top: 29px;
+  width: 100%;
+  position: relative;
+}
+body .global .mainFloor .allBuy ul.allUl {
+  width: 1230px;
+  position: relative;
+  overflow: hidden;
+  min-height: 30px;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item {
+  width: 226px;
+  height: 290px;
+  margin-right: 20px;
+  float: left;
+  margin-bottom: 30px;
+  position: relative;
+  background: #fff;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item:hover {
+  border-color: #ff4883;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a {
+  display: block;
+  font-size: 0;
+  position: relative;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a img {
+  border: 1px solid #dfdfdf;
+  width: 224px;
+  height: 135px;
+  background-image: url("../img/loading.png");
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a i.free-appoint {
+  width: 56px;
+  height: 56px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url("../img/free-app.png");
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a .locate-opac {
+  display: block;
+  width: 226px;
+  height: 36px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a .locate-opac i.locaIcon {
+  width: 12px;
+  height: 12px;
+  background: url("../img/white-locate.png") no-repeat;
+  float: left;
+  margin: 11px 3px 0;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a .locate-opac span {
+  max-width: 205px;
+  display: block;
+  float: left;
+  font-size: 12px;
+  line-height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.title {
+  display: block;
+  font-size: 16px;
+  max-width: 186px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 700;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.title:hover {
+  color: #ff4883;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.des {
+  font-size: 12px;
+  color: #9e9e9e;
+  display: -webkit-box !important;
+  display: block;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item a.des:hover {
+  color: #005aa0;
+  text-decoration: underline;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice {
+  overflow: hidden;
+  line-height: 32px;
+  height: 32px;
+  width: 100%;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice span.i-mon {
+  float: left;
+  margin-top: 2px;
+  color: #ff4883;
+  font-size: 16px;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice .ticket-icon {
+  width: 17px;
+  height: 17px;
+  float: right;
+  margin-right: 5px;
+  margin-top: 7px;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice .ticket-icon.on1 {
+  background: url("../img/tic.png");
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice span.curPrice {
+  float: left;
+  color: #ff4883;
+  font-size: 24px;
+  margin: 0 5px;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice span.prePriceOut {
+  float: right;
+  font-size: 12px;
+  color: #9e9e9e;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .outPrice span.prePriceOut span {
+  text-decoration: line-through;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item:hover .line {
+  height: 1px;
+  border-bottom: 2px solid #ff4883;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .line {
+  height: 2px;
+  border-bottom: 1px solid #e6e6e6;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .out-sold {
+  line-height: 23px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .out-sold span {
+  font-size: 12px;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .out-sold span.gold {
+  float: left;
+  color: #005aa0;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .out-sold span.sold {
+  color: #9e9e9e;
+  float: right;
+}
+body .global .mainFloor .allBuy ul.allUl>li.list-item .out-sold .lines {
+  width: 1210px;
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #dfdfdf;
+}
 @media (max-width: 1210px) {
   body {
     min-width: 980px;
@@ -630,5 +870,19 @@ body .global .allStore .startTime .desTime {
   }
   body .global .allStore .startTime .desTime {
     left: 205px;
+  }
+  body .global .mainFloor {
+    width: 980px;
+  }
+  body .global .mainFloor .allBuy ul.allUl {
+    width: 1000px;
+  }
+  body .global .mainFloor .allBuy ul.allUl>li.list-item {
+    width: 180px;
+    height: 263px;
+  }
+  body .global .mainFloor .allBuy ul.allUl>li.list-item a.img-a img {
+    width: 178px;
+    height: 108px;
   }
 }

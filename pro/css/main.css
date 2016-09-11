@@ -1389,6 +1389,7 @@ body {
   border: 1px solid #dfdfdf;
   width: 224px;
   height: 135px;
+  background-image: url("../img/loading.png");
 }
 .global .pubFloor ul.allListItem>li.list-item a.img-a i.free-appoint {
   width: 56px;
